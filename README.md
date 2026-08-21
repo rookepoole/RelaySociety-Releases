@@ -4,20 +4,20 @@
 
 Relay Society is a local-first runtime and Control Room for creating exact task contracts, granting bounded authority, running durable work, retaining evidence, and closing successful tasks with signed receipts.
 
-[Download the latest beta](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.68) · [Exact setup guide](docs/GETTING_STARTED.md) · [Capabilities](docs/CAPABILITIES.md) · [Security](SECURITY.md) · [Report a problem](https://github.com/rookepoole/RelaySociety-Releases/issues/new/choose)
+[Download the latest beta](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.69) · [Exact setup guide](docs/GETTING_STARTED.md) · [Capabilities](docs/CAPABILITIES.md) · [Security](SECURITY.md) · [Report a problem](https://github.com/rookepoole/RelaySociety-Releases/issues/new/choose)
 
 > [!WARNING]
-> Relay Society v0.3.68 is an **unsigned beta**. Windows and Linux x64 packages are available; there is no accepted macOS build yet. Verify the complete SHA-256 digest before running a package. Checksums detect changed bytes, but they are not a substitute for code signing or independently attested provenance.
+> Relay Society v0.3.69 is an **unsigned beta**. Windows and Linux x64 packages are available; there is no accepted macOS build yet. Verify the complete SHA-256 digest before running a package. Checksums detect changed bytes, but they are not a substitute for code signing or independently attested provenance.
 
-## Download v0.3.68 beta
+## Download v0.3.69 beta
 
 | Platform | Package | Size | SHA-256 |
 | --- | --- | ---: | --- |
-| Windows 10/11 x64 | [Portable ZIP](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.68/Relay-Society-v0.3.68-windows-x64.zip) | 9,652,174 bytes | `7015e1519caa451de1e895591f20eac517fb950f20eee4e2b2f86f9c56f71ae7` |
-| Linux x64, static musl | [tar.gz](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.68/Relay-Society-v0.3.68-linux-x64.tar.gz) | 10,469,251 bytes | `60e6e2c47072072d10c5427a5b12237d051ab65b4dbab26a7dbaeb197f4cd652` |
+| Windows 10/11 x64 | [Portable ZIP](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.69/Relay-Society-v0.3.69-windows-x64.zip) | 10,170,428 bytes | `29d4c92fd3117508bb5e13fe284f9a37c5049d1e171d3d1dd4e48a0d630cc17f` |
+| Linux x64, static musl | [tar.gz](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.69/Relay-Society-v0.3.69-linux-x64.tar.gz) | 10,657,876 bytes | `8b67e9fe0805a7e2843c029a9786a245a276d2446d440323f5ab25e2483eda8f` |
 | macOS | Not available | — | Native qualification, signing, and notarization remain open |
 
-The [v0.3.68 release page](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.68) also contains `SHA256SUMS.txt`, release notes, and the immutable machine-readable update manifest. [`releases/current.json`](releases/current.json) is the repository's human- and machine-readable release catalog; it does not authorize automatic execution.
+The [v0.3.69 release page](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.69) also contains `SHA256SUMS.txt`, release notes, and the immutable machine-readable update manifest. [`releases/current.json`](releases/current.json) is the repository's human- and machine-readable release catalog; it does not authorize automatic execution.
 
 ## Start in a few minutes
 
@@ -27,7 +27,7 @@ The [v0.3.68 release page](https://github.com/rookepoole/RelaySociety-Releases/r
 2. Verify it in PowerShell:
 
    ```powershell
-   Get-FileHash .\Relay-Society-v0.3.68-windows-x64.zip -Algorithm SHA256
+   Get-FileHash .\Relay-Society-v0.3.69-windows-x64.zip -Algorithm SHA256
    ```
 
 3. Require the complete digest to match the Windows value above.
@@ -42,9 +42,9 @@ Windows can show a protection warning because the beta is unsigned. Only continu
 The normal desktop path requires an unlocked freedesktop Secret Service in the same user session, normally GNOME Keyring.
 
 ```sh
-sha256sum Relay-Society-v0.3.68-linux-x64.tar.gz
-tar -xzf Relay-Society-v0.3.68-linux-x64.tar.gz
-cd Relay-Society-v0.3.68-linux-x64
+sha256sum Relay-Society-v0.3.69-linux-x64.tar.gz
+tar -xzf Relay-Society-v0.3.69-linux-x64.tar.gz
+cd Relay-Society-v0.3.69-linux-x64
 ./Install\ for\ Current\ User.sh
 relay-society-control-room
 ```
@@ -61,12 +61,13 @@ See [Getting started](docs/GETTING_STARTED.md) for the complete first-task, back
 - Runs retryable jobs and fail-closed external-effect jobs with stable effect keys, receipts, bounded attempts, and ambiguity quarantine.
 - Lets the assignee submit retained evidence and the requester finalize every exact contract check once.
 - Produces append-only event chains, signed terminal receipts, portable evidence bundles, and context-specific early reputation observations.
+- Runs the first production governed-council slice with distinct council principals, conflict exclusion, vote revision, deterministic close, minority-argument retention, and integrity verification.
 - Stores the master key in Windows Credential Manager or Linux Secret Service and keeps provider credentials sealed.
 - Provides transactional backup, verification, restore, portable recovery, and read-only diagnostics.
-- Ships a versioned REST API, OpenAPI 3.1.1 contract, and deterministic Python and TypeScript clients.
+- Ships an 85-operation versioned REST API, OpenAPI 3.1.1 contract, and deterministic Python and TypeScript clients.
 - Includes bounded integration slices for MCP, A2A, signed webhooks, OpenAI-compatible providers, Ollama, and five agent frameworks.
 
-The packages contain the real schema-37 runtime and Control Room. They are not mock or demonstration-only bundles. The full evidence-bounded capability inventory is in [CAPABILITIES.md](docs/CAPABILITIES.md).
+The packages contain the real schema-38 runtime and Control Room. They are not mock or demonstration-only bundles. The full evidence-bounded capability inventory is in [CAPABILITIES.md](docs/CAPABILITIES.md).
 
 ## The governed task lifecycle
 
@@ -120,7 +121,7 @@ Relay Society currently does **not** claim:
 - multi-tenant human identity proof;
 - global exactly-once external effects—ambiguous outcomes are quarantined instead of silently repeated;
 - production-certified Vault HA/TLS/seal operations;
-- production public reputation, councils, nonzero-money settlement, or society-scale simulation.
+- production public reputation, cryptographic council-member identity or broader council governance modes, nonzero-money settlement, or society-scale simulation.
 
 The public GitHub repository currently contains the release channel and its documentation. The full development source tree is not being represented as published or independently reproducible yet. Files will be added here only when they are reviewed, release-relevant, and safe to make public.
 

@@ -6,7 +6,7 @@ Relay Society is currently an unsigned beta. Security fixes are evaluated for th
 
 | Version | Supported |
 | --- | --- |
-| 0.3.68 | Yes |
+| 0.3.69 | Yes |
 | Earlier betas | No; reproduce against the current beta first |
 
 ## Report a vulnerability privately
@@ -48,7 +48,7 @@ The current beta does not claim:
 - a hardware or WORM monotonic anchor or trusted time;
 - production-certified Vault HA/TLS/seal operations;
 - a native macOS package;
-- production public reputation, councils, nonzero settlement, or society-scale operation.
+- production public reputation, cryptographic council-member identity or broader council governance modes, nonzero settlement, or society-scale operation.
 
 A report that demonstrates escape from the stated boundary, a failure to enforce the boundary, secret disclosure, unauthorized durable mutation, evidence forgery, recovery rollback, or unsafe external-effect redispatch is in scope.
 

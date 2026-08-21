@@ -1,30 +1,30 @@
 # Relay Society beta: exact getting-started guide
 
-This guide applies to the accepted unsigned Relay Society v0.3.68/schema-37 Windows x64 and Linux x64 packages. macOS has no accepted native artifact.
+This guide applies to the accepted unsigned Relay Society v0.3.69/schema-38 Windows x64 and Linux x64 packages. macOS has no accepted native artifact.
 
 ## Download first
 
-Use only the assets attached to the [v0.3.68 GitHub release](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.68).
+Use only the assets attached to the [v0.3.69 GitHub release](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.69).
 
 | Platform | File | Required SHA-256 |
 | --- | --- | --- |
-| Windows x64 | `Relay-Society-v0.3.68-windows-x64.zip` | `7015e1519caa451de1e895591f20eac517fb950f20eee4e2b2f86f9c56f71ae7` |
-| Linux x64 | `Relay-Society-v0.3.68-linux-x64.tar.gz` | `60e6e2c47072072d10c5427a5b12237d051ab65b4dbab26a7dbaeb197f4cd652` |
+| Windows x64 | `Relay-Society-v0.3.69-windows-x64.zip` | `29d4c92fd3117508bb5e13fe284f9a37c5049d1e171d3d1dd4e48a0d630cc17f` |
+| Linux x64 | `Relay-Society-v0.3.69-linux-x64.tar.gz` | `8b67e9fe0805a7e2843c029a9786a245a276d2446d440323f5ab25e2483eda8f` |
 
 Do not run a package when the complete digest differs. See [Release integrity](RELEASE_INTEGRITY.md) for verification details and limitations.
 
 ## Windows x64
 
-1. Download `Relay-Society-v0.3.68-windows-x64.zip`.
+1. Download `Relay-Society-v0.3.69-windows-x64.zip`.
 2. Open PowerShell in the download directory and run:
 
    ```powershell
-   Get-FileHash .\Relay-Society-v0.3.68-windows-x64.zip -Algorithm SHA256
+   Get-FileHash .\Relay-Society-v0.3.69-windows-x64.zip -Algorithm SHA256
    ```
 
-3. Require the complete result to equal `7015e1519caa451de1e895591f20eac517fb950f20eee4e2b2f86f9c56f71ae7`.
+3. Require the complete result to equal `29d4c92fd3117508bb5e13fe284f9a37c5049d1e171d3d1dd4e48a0d630cc17f`.
 4. In File Explorer, right-click the ZIP and choose **Extract All**.
-5. Open the extracted `Relay-Society-v0.3.68-windows-x64` directory. Do not launch from inside the ZIP.
+5. Open the extracted `Relay-Society-v0.3.69-windows-x64` directory. Do not launch from inside the ZIP.
 6. Double-click **Launch Relay Society.cmd** and keep the console window open.
 7. The launcher opens the Control Room at `http://127.0.0.1:7411` and uses a one-use local sign-in code.
 8. Because this beta is unsigned, Windows can show a protection dialog. Verify the complete checksum first. If it matches, choose **More info → Run anyway**.
@@ -37,14 +37,14 @@ Runtime data remains outside the application directory at `%LOCALAPPDATA%\Relay 
 The normal desktop path requires a running, unlocked freedesktop Secret Service in the same user session, normally GNOME Keyring. Headless users must initialize the included Vault Transit path before first launch instead of weakening local key custody.
 
 ```sh
-sha256sum Relay-Society-v0.3.68-linux-x64.tar.gz
-tar -xzf Relay-Society-v0.3.68-linux-x64.tar.gz
-cd Relay-Society-v0.3.68-linux-x64
+sha256sum Relay-Society-v0.3.69-linux-x64.tar.gz
+tar -xzf Relay-Society-v0.3.69-linux-x64.tar.gz
+cd Relay-Society-v0.3.69-linux-x64
 ./Install\ for\ Current\ User.sh
 relay-society-control-room
 ```
 
-Require the complete archive checksum to equal `60e6e2c47072072d10c5427a5b12237d051ab65b4dbab26a7dbaeb197f4cd652`.
+Require the complete archive checksum to equal `8b67e9fe0805a7e2843c029a9786a245a276d2446d440323f5ab25e2483eda8f`.
 
 The installer creates a versioned current-user installation, command links, desktop entry, and user-service definition. It does not start the service. Portable users can run `./Launch\ Relay\ Society.sh` from the extracted directory.
 
@@ -65,6 +65,19 @@ Runtime data is at `$XDG_DATA_HOME/relay-society` or `~/.local/share/relay-socie
 
 Invitation possession is a task-scoped bearer capability, not cryptographic proof of a person or workload. A human-approval decision records evidence; it does not itself execute the approved action.
 
+## Complete the first governed council
+
+1. Open **Councils**, create a council, and review the copy-once secret warning.
+2. Issue one invitation for each distinct member subject. Share each invitation only with its intended member.
+3. Each member opens the member workspace in a separate browser tab, exchanges the invitation once, and keeps the returned council bearer in that tab's memory.
+4. Create the immutable proposal. Members disclose conflicts before the owner opens voting.
+5. Set the integer quorum, approval threshold, and deadline, then open voting. Membership, conflicts, proposal, and policy freeze at this point.
+6. Eligible members add arguments, optionally endorse a losing-side argument for minority retention, and vote `approve`, `reject`, or `abstain`. Pre-close revisions remain auditable.
+7. Close after the declared conditions are met. Inspect the deterministic tally, retained minority argument, policy and membership hashes, decision hash, and event history.
+8. Choose **Verify** to recompute and validate the complete council record.
+
+Council bearers prove distinct council-scoped authorization subjects, not one-human-one-account or physical-human identity. This release does not include amendments, delegation, veto, appeals, escalation, ranked choice, secret ballots, or federated councils.
+
 ## Back up before changing anything
 
 1. Run `relay-society backup` using the current binary.
@@ -75,7 +88,7 @@ A normal backup does not contain the Windows Credential Manager or Linux Secret 
 
 ## Update safely
 
-Relay v0.3.68 uses manual, user-confirmed updates. It does not automatically download or execute a replacement.
+Relay v0.3.69 uses manual, user-confirmed updates. It does not automatically download or execute a replacement.
 
 1. Complete and verify the backup steps above.
 2. Stop Relay.
@@ -102,4 +115,4 @@ To downgrade after a schema upgrade, restore the matching pre-upgrade backup rat
 - The default product is single-administrator and local-first, not multi-tenant identity infrastructure.
 - Same-user malware and hostile worker code are outside the security boundary.
 - External effects are not globally exactly once; ambiguous outcomes quarantine rather than silently repeat.
-- Native macOS, signed provenance, reproducible distributions, automatic updating, full public reputation, councils, nonzero settlement, and society-scale simulation remain open work.
+- Native macOS, signed provenance, reproducible distributions, automatic updating, full public reputation, broader council governance modes, nonzero settlement, and society-scale simulation remain open work.
