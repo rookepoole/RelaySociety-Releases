@@ -1,6 +1,6 @@
-# Relay Society v0.3.68 capabilities
+# Relay Society v0.3.69 capabilities
 
-This is the evidence-bounded public inventory for the accepted v0.3.68/schema-37 beta. “Implemented” means the end-user path exists. It does not expand a feature beyond the boundary stated beside it.
+This is the evidence-bounded public inventory for the accepted v0.3.69/schema-38 beta. “Implemented” means the end-user path exists. It does not expand a feature beyond the boundary stated beside it.
 
 ## Core product
 
@@ -55,6 +55,21 @@ Implemented:
 - task-bound appeals with correction-by-exclusion.
 
 Boundary: signed local evidence is real. Trusted time, public reputation, independent adjudication, and society-wide Sybil resistance are not claimed.
+
+### Governed councils — Advanced beta
+
+Implemented first production slice:
+
+- owner-created councils with one-use, hash-only invitations for distinct council-scoped member principals;
+- immutable proposals plus frozen membership, conflict, quorum, approval-threshold, option, and deadline records;
+- pre-open conflict disclosure and automatic conflicted-member exclusion from eligibility and quorum;
+- retained deliberation arguments, losing-side minority endorsements, and append-only vote revision histories;
+- deterministic close with tie rejection, exact tally and outcome, retained minority argument, and canonical decision hash;
+- owner and no-administrator member workspaces in the Control Room;
+- all 15 council operations in the generated Python and TypeScript clients;
+- hash-chained council events, explicit integrity verification, restart validation, and backup/restore preservation.
+
+Boundary: a council bearer proves a distinct council-scoped authorization subject, not one-human-one-account or physical-human identity. Amendments, delegation, veto, appeals, escalation, ranked choice, secret ballots, federated councils, and automated claims that an argument is objectively strongest remain open.
 
 ### Authentication and secret custody — Beta
 
@@ -158,7 +173,7 @@ Implemented:
 - structured server and SDK errors;
 - health and readiness with transport truth;
 - SQLite WAL, transactional migrations, and newer-schema refusal;
-- 70 current JSON request/response operations.
+- 85 current JSON request/response operations.
 
 Boundary: the generated clients and OpenAPI document ship inside the platform packages. This release repository is not yet the complete development source tree.
 
@@ -184,7 +199,7 @@ Boundary: narrow verified slices exist. Automatic enrollment, a complete remote-
 | G2 | Framework and protocol bridge | Partial |
 | G3 | Identity and capability trust | Partial |
 | G4 | Evidence-based reputation | Partial |
-| G5 | Governed councils | Planned |
+| G5 | Governed councils | Partial; first production slice is accepted on Windows and Linux |
 | G6 | Federation | Partial |
 | G7 | Settlement | Planned; nonzero-money settlement is disabled |
 | G8 | Society laboratory | Planned |

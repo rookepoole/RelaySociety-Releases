@@ -14,7 +14,7 @@ body:
     attributes:
       label: Relay version
       description: Include the version and schema shown by Relay when possible.
-      placeholder: v0.3.68 / schema 37
+      placeholder: v0.3.69 / schema 38
     validations:
       required: true
   - type: dropdown
