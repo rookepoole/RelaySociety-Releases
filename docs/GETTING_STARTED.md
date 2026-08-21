@@ -1,30 +1,30 @@
 # Relay Society beta: exact getting-started guide
 
-This guide applies to the accepted unsigned Relay Society v0.3.71/schema-40 Windows x64 and Linux x64 packages. macOS has no accepted native artifact.
+This guide applies to the accepted unsigned Relay Society v0.3.72/schema-41 Windows x64 and Linux x64 packages. macOS has no accepted native artifact.
 
 ## Download first
 
-Use only the assets attached to the [v0.3.71 GitHub release](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.71).
+Use only the assets attached to the [v0.3.72 GitHub release](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.72).
 
 | Platform | File | Required SHA-256 |
 | --- | --- | --- |
-| Windows x64 | `Relay-Society-v0.3.71-windows-x64.zip` | `9644f574cf9266e569f5f7dc9342ee71045d6f856c01c4091f537e47496ad2fc` |
-| Linux x64 | `Relay-Society-v0.3.71-linux-x64.tar.gz` | `f5347fd9f10c85c7c2ca101fcd8c151e7185485f87816869f9c5bfca884c5a64` |
+| Windows x64 | `Relay-Society-v0.3.72-windows-x64.zip` | `71bad8d9f4513082af3d9ab419ce5b1b015ee2facb5bee22fba6620d1709a205` |
+| Linux x64 | `Relay-Society-v0.3.72-linux-x64.tar.gz` | `cdc229d471c3ab38c9ea5f204e80a7f03c331a96e7424e0836c53b273c050c63` |
 
 Do not run a package when the complete digest differs. See [Release integrity](RELEASE_INTEGRITY.md) for verification details and limitations.
 
 ## Windows x64
 
-1. Download `Relay-Society-v0.3.71-windows-x64.zip`.
+1. Download `Relay-Society-v0.3.72-windows-x64.zip`.
 2. Open PowerShell in the download directory and run:
 
    ```powershell
-   Get-FileHash .\Relay-Society-v0.3.71-windows-x64.zip -Algorithm SHA256
+   Get-FileHash .\Relay-Society-v0.3.72-windows-x64.zip -Algorithm SHA256
    ```
 
-3. Require the complete result to equal `9644f574cf9266e569f5f7dc9342ee71045d6f856c01c4091f537e47496ad2fc`.
+3. Require the complete result to equal `71bad8d9f4513082af3d9ab419ce5b1b015ee2facb5bee22fba6620d1709a205`.
 4. In File Explorer, right-click the ZIP and choose **Extract All**.
-5. Open the extracted `Relay-Society-v0.3.71-windows-x64` directory. Do not launch from inside the ZIP.
+5. Open the extracted `Relay-Society-v0.3.72-windows-x64` directory. Do not launch from inside the ZIP.
 6. Double-click **Launch Relay Society.cmd** and keep the console window open.
 7. The launcher opens the Control Room at `http://127.0.0.1:7411` and uses a one-use local sign-in code.
 8. Because this beta is unsigned, Windows can show a protection dialog. Verify the complete checksum first. If it matches, choose **More info → Run anyway**.
@@ -37,14 +37,14 @@ Runtime data remains outside the application directory at `%LOCALAPPDATA%\Relay 
 The normal desktop path requires a running, unlocked freedesktop Secret Service in the same user session, normally GNOME Keyring. Headless users must initialize the included Vault Transit path before first launch instead of weakening local key custody.
 
 ```sh
-sha256sum Relay-Society-v0.3.71-linux-x64.tar.gz
-tar -xzf Relay-Society-v0.3.71-linux-x64.tar.gz
-cd Relay-Society-v0.3.71-linux-x64
+sha256sum Relay-Society-v0.3.72-linux-x64.tar.gz
+tar -xzf Relay-Society-v0.3.72-linux-x64.tar.gz
+cd Relay-Society-v0.3.72-linux-x64
 ./Install\ for\ Current\ User.sh
 relay-society-control-room
 ```
 
-Require the complete archive checksum to equal `f5347fd9f10c85c7c2ca101fcd8c151e7185485f87816869f9c5bfca884c5a64`.
+Require the complete archive checksum to equal `cdc229d471c3ab38c9ea5f204e80a7f03c331a96e7424e0836c53b273c050c63`.
 
 The installer creates a versioned current-user installation, command links, desktop entry, and user-service definition. It does not start the service. Portable users can run `./Launch\ Relay\ Society.sh` from the extracted directory.
 
@@ -64,6 +64,19 @@ Runtime data is at `$XDG_DATA_HOME/relay-society` or `~/.local/share/relay-socie
 10. The requester chooses **Finalize task**, records every exact contract check, and accepts or rejects once. An accepted zero-money task closes and receives its signed receipt automatically.
 
 Invitation possession is a task-scoped bearer capability, not cryptographic proof of a person or workload. A human-approval decision records evidence; it does not itself execute the approved action.
+
+## Complete the first no-value settlement
+
+1. Create a task with a positive budget, such as `10.00 USD`, and open its **Settlement** workspace before activation.
+2. Fund the requester simulator wallet with exactly 1,000 minor units. These local credits cannot be bought, redeemed, or sent outside Relay.
+3. Add one to 64 unique participant contributions whose integer shares total exactly 10,000 basis points, then freeze the signed quote.
+4. Authorize the exact hold with the default Relay-local profile. The advanced AP2 path is a narrow compact ES256 closed-checkout profile, not full AP2/SD-JWT/delegation support.
+5. Have the participant join and accept the exact task contract, then activate the task.
+6. In the participant tab, record signed tool/model/runtime/pricing usage. The qualified reference flow records 700 minor units.
+7. If needed, isolate only the challenged contribution, attach retained evidence, then release it to the contributor or refund it to the requester. Unrelated payouts remain available.
+8. Finalize payouts and inspect the immutable ledger, balances, disputes, resolutions, and settlement receipt. The qualified reference flow resolves 200 units, pays 800, closes, and retains `liveValue:false`.
+
+This is a no-value simulator for governed accounting evidence. Live payments remain prohibited until a real provider SPI plus legal, security, and provider review exist.
 
 ## Complete the first governed council
 
@@ -90,7 +103,7 @@ A normal backup does not contain the Windows Credential Manager or Linux Secret 
 
 ## Update safely
 
-Relay v0.3.71 uses manual, user-confirmed updates. It does not automatically download or execute a replacement.
+Relay v0.3.72 uses manual, user-confirmed updates. It does not automatically download or execute a replacement.
 
 1. Complete and verify the backup steps above.
 2. Stop Relay.
@@ -117,4 +130,4 @@ To downgrade after a schema upgrade, restore the matching pre-upgrade backup rat
 - The default product is single-administrator and local-first, not multi-tenant identity infrastructure.
 - Same-user malware and hostile worker code are outside the security boundary.
 - External effects are not globally exactly once; ambiguous outcomes quarantine rather than silently repeat.
-- Native macOS, signed provenance, reproducible distributions, automatic updating, full public reputation, broader council governance modes, nonzero settlement, and society-scale simulation remain open work.
+- Native macOS, signed provenance, reproducible distributions, automatic updating, full public reputation, broader council governance modes, live-value settlement, full AP2/SD-JWT/delegation, a real payment provider, and society-scale simulation remain open work.

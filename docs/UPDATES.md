@@ -2,7 +2,7 @@
 
 ## Update policy
 
-Relay Society beta updates are manual and user-confirmed. The v0.3.71 runtime does not silently download or execute a replacement.
+Relay Society beta updates are manual and user-confirmed. The v0.3.72 runtime does not silently download or execute a replacement.
 
 GitHub Releases is the canonical binary store. The mutable [`releases/current.json`](../releases/current.json) catalog helps humans and repository checks find the current tag. Every tag also carries an immutable version-specific update manifest.
 
@@ -29,6 +29,8 @@ The normal backup does not contain the Windows Credential Manager or Linux Secre
 9. Exercise a non-consequential governed task before relying on consequential workflows.
 
 SQLite migrations are numbered and transactional. A binary older than the current data schema refuses to open it.
+
+The exact v0.3.71/schema-40 to v0.3.72/schema-41 adjacent upgrade is qualified on Windows Credential Manager and Linux Secret Service. It preserves canonical task, event, artifact, and receipt rows, installs the new settlement tables empty, verifies the prior receipt, and passes authenticated backup/restore. This evidence does not replace the user's own backup.
 
 ## Rollback
 

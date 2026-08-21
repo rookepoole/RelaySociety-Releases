@@ -1,6 +1,6 @@
-# Relay Society v0.3.71 capabilities
+# Relay Society v0.3.72 capabilities
 
-This is the evidence-bounded public inventory for the accepted v0.3.71/schema-40 beta. “Implemented” means the end-user path exists. It does not expand a feature beyond the boundary stated beside it.
+This is the evidence-bounded public inventory for the accepted v0.3.72/schema-41 beta. “Implemented” means the end-user path exists. It does not expand a feature beyond the boundary stated beside it.
 
 ## Core product
 
@@ -100,6 +100,22 @@ Implemented:
 
 Boundary: a normal backup and portable recovery material cover different state. Users must retain both when moving machines or OS identities.
 
+### No-value settlement — Advanced beta
+
+Implemented first production slice:
+
+- exact integer-minor-unit requester simulator funding;
+- signed contribution quotes for one to 64 unique participants totaling exactly 10,000 basis points;
+- exact idempotent authorization and holds using the Relay-local profile or the narrow AP2 v0.2 compact ES256 closed-checkout profile;
+- participant-signed tool, model, runtime, and pricing usage evidence;
+- bounded dispute isolation with retained evidence and explicit release-to-contributor or refund-to-requester resolution;
+- unrelated payouts while a challenged allocation remains isolated;
+- immutable balanced double-entry transactions, balances, payouts, and settlement receipts;
+- all eight settlement operations in the 96-operation generated Python and TypeScript clients and the requester/participant Control Room;
+- Windows and Linux schema-40-to-41 migration, receipt verification, backup, and restore without invented settlement history.
+
+Boundary: simulator credits cannot be purchased, redeemed, sent outside Relay, or described as money. `liveValue` remains false. Full AP2/SD-JWT/delegation, a real payment-provider SPI, live-value legal/security/provider clearance, and post-terminal dispute policy remain open; live payments are prohibited.
+
 ## Models, protocols, and developers
 
 ### Provider broker and local models — Advanced beta
@@ -176,7 +192,7 @@ Implemented:
 - structured server and SDK errors;
 - health and readiness with transport truth;
 - SQLite WAL, transactional migrations, and newer-schema refusal;
-- 88 current JSON request/response operations.
+- 96 current JSON request/response operations.
 
 Boundary: the generated clients and OpenAPI document ship inside the platform packages. This release repository is not yet the complete development source tree.
 
@@ -204,7 +220,7 @@ Boundary: narrow verified slices exist. Automatic enrollment, a complete remote-
 | G4 | Evidence-based reputation | Partial |
 | G5 | Governed councils | Partial; first production slice is accepted on Windows and Linux |
 | G6 | Federation | Partial |
-| G7 | Settlement | Planned; nonzero-money settlement is disabled |
+| G7 | Settlement | Partial; the bounded no-value simulator slice is accepted, while live-value settlement remains prohibited |
 | G8 | Society laboratory | Planned |
 
 The next release-critical gaps are source publication and repeatable CI provenance, signed packages, native macOS qualification, safe native updating and rollback, and independent-machine evidence.
