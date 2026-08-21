@@ -1,6 +1,6 @@
-# Relay Society v0.3.70 capabilities
+# Relay Society v0.3.71 capabilities
 
-This is the evidence-bounded public inventory for the accepted v0.3.70/schema-39 beta. “Implemented” means the end-user path exists. It does not expand a feature beyond the boundary stated beside it.
+This is the evidence-bounded public inventory for the accepted v0.3.71/schema-40 beta. “Implemented” means the end-user path exists. It does not expand a feature beyond the boundary stated beside it.
 
 ## Core product
 
@@ -66,11 +66,13 @@ Implemented first production slice:
 - retained deliberation arguments with up to sixteen ordered, typed, content-addressed Relay artifact, Relay receipt, or credential-free HTTPS citations;
 - losing-side minority endorsements and append-only vote revision histories;
 - deterministic close with tie rejection, exact tally and outcome, a structured minority report retaining the selected argument and its citations, and a report-bound canonical decision hash;
+- frozen distinct appellant, appeal-reviewer, and veto-authority subjects with bounded post-vote deadlines and one normalized escalation target;
+- one append-only appeal with typed evidence, named-authority review, durable no-delivery escalation, append-only veto, and derived effective disposition without mutating the original decision;
 - owner and no-administrator member workspaces in the Control Room;
-- all 15 council operations in the generated Python and TypeScript clients;
+- all 18 council operations in the generated Python and TypeScript clients;
 - hash-chained council events, explicit integrity verification, restart validation, and backup/restore preservation.
 
-Boundary: a council bearer proves a distinct council-scoped authorization subject, not one-human-one-account or physical-human identity. Relay preserves citation locators and digests but does not fetch them, decide their truth, or grant them authority. Amendments, delegation, veto, appeals, escalation, ranked choice, secret ballots, federated councils, and automated claims that an argument is objectively strongest remain open.
+Boundary: a council bearer proves a distinct council-scoped authorization subject, not one-human-one-account or physical-human identity. Relay preserves citation locators and digests but does not fetch them, decide their truth, or grant them authority. Escalation is recorded but not delivered (`deliveryAttempted=false`). Amendments, delegation, ranked choice, secret ballots, federated councils, and automated claims that an argument is objectively strongest remain open.
 
 ### Authentication and secret custody — Beta
 
@@ -174,7 +176,7 @@ Implemented:
 - structured server and SDK errors;
 - health and readiness with transport truth;
 - SQLite WAL, transactional migrations, and newer-schema refusal;
-- 85 current JSON request/response operations.
+- 88 current JSON request/response operations.
 
 Boundary: the generated clients and OpenAPI document ship inside the platform packages. This release repository is not yet the complete development source tree.
 

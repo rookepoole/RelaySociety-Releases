@@ -9,6 +9,17 @@ This file records public release-channel and documentation changes. Product chan
 - Added a machine-readable current-release catalog and automated repository validation.
 - Added structured bug and feature-request templates.
 
+## v0.3.71 beta — 2026-08-21
+
+- Published the accepted unsigned schema-40 Windows x64 and static Linux x64 packages.
+- Added frozen distinct appellant, appeal-reviewer, and veto-authority roles with bounded review deadlines and one normalized escalation target.
+- Added append-only appeal, review, escalation, and veto records while preserving the original decision and deriving its effective disposition.
+- Rejected appeal equivocation and wrong-authority review/veto attempts; escalation remains durable evidence with no outbound delivery.
+- Qualified all 18 council methods in the complete packaged 88-operation client flows on Windows and Linux.
+- Published exact SHA-256 checksums and the immutable manual-update manifest.
+
+[Release notes and downloads](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.71)
+
 ## v0.3.70 beta — 2026-08-21
 
 - Published the accepted unsigned schema-39 Windows x64 and static Linux x64 packages.
