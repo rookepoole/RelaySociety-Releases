@@ -1,0 +1,48 @@
+name: Feature request
+description: Propose a concrete Relay Society end-user outcome.
+title: "[Feature]: "
+labels:
+  - enhancement
+  - needs-triage
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the user problem without prescribing an implementation first.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What should a real end user be able to complete?
+    validations:
+      required: true
+  - type: textarea
+    id: governance
+    attributes:
+      label: Authority, evidence, and failure boundary
+      description: Who may authorize it, what evidence should be retained, and how should failure or ambiguity be handled?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Product area
+      options:
+        - Control Room and governed tasks
+        - Durable jobs and external effects
+        - Evidence, receipts, and reputation
+        - Authentication, custody, and recovery
+        - MCP, A2A, or webhooks
+        - Providers and framework integrations
+        - Packaging, installation, or updates
+        - Documentation or accessibility
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Current workaround or alternatives

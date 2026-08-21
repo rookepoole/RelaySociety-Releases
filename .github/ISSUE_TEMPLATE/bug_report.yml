@@ -1,0 +1,75 @@
+name: Beta bug report
+description: Report a reproducible Relay Society product, package, or documentation failure.
+title: "[Bug]: "
+labels:
+  - bug
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing Relay Society. Never include tokens, invitation packages, participant bearers, provider keys, portable recovery material, or private task evidence. Report suspected vulnerabilities through the private security flow instead.
+  - type: input
+    id: version
+    attributes:
+      label: Relay version
+      description: Include the version and schema shown by Relay when possible.
+      placeholder: v0.3.68 / schema 37
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows x64 portable ZIP
+        - Linux x64 portable archive
+        - Linux x64 current-user install
+        - Release page or documentation
+    validations:
+      required: true
+  - type: checkboxes
+    id: preparation
+    attributes:
+      label: Preparation
+      options:
+        - label: I downloaded the package from this repository and its complete SHA-256 matched the release page.
+          required: true
+        - label: I searched existing issues for this symptom.
+          required: true
+        - label: I removed all secrets and private task data from this report.
+          required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Give the smallest exact sequence that reproduces the failure.
+      placeholder: |
+        1. Launch Relay using...
+        2. In the Control Room, choose...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics
+      description: Include relevant console output and doctor results only after removing secrets and private data.
+      render: text
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and recovery state
+      description: Say whether Relay restarts, whether existing data is affected, and whether you have a verified backup.

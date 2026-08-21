@@ -1,0 +1,41 @@
+{
+  "catalogVersion": 1,
+  "product": "Relay Society",
+  "channel": "beta",
+  "version": "0.3.68",
+  "tag": "v0.3.68",
+  "schema": 37,
+  "prerelease": true,
+  "signed": false,
+  "automaticExecution": false,
+  "releasePage": "https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.68",
+  "checksums": "https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.68/SHA256SUMS.txt",
+  "updateManifest": "https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.68/relay.update-manifest-v0.3.68.json",
+  "platforms": [
+    {
+      "platform": "windows",
+      "architecture": "x86_64",
+      "format": "zip",
+      "file": "Relay-Society-v0.3.68-windows-x64.zip",
+      "bytes": 9652174,
+      "sha256": "7015e1519caa451de1e895591f20eac517fb950f20eee4e2b2f86f9c56f71ae7",
+      "url": "https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.68/Relay-Society-v0.3.68-windows-x64.zip"
+    },
+    {
+      "platform": "linux",
+      "architecture": "x86_64",
+      "format": "tar.gz",
+      "libc": "musl",
+      "file": "Relay-Society-v0.3.68-linux-x64.tar.gz",
+      "bytes": 10469251,
+      "sha256": "60e6e2c47072072d10c5427a5b12237d051ab65b4dbab26a7dbaeb197f4cd652",
+      "url": "https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.68/Relay-Society-v0.3.68-linux-x64.tar.gz"
+    }
+  ],
+  "unsupportedPlatforms": [
+    {
+      "platform": "macos",
+      "reason": "No native accepted artifact, code signing, or notarization yet."
+    }
+  ]
+}
