@@ -9,6 +9,17 @@ This file records public release-channel and documentation changes. Product chan
 - Added a machine-readable current-release catalog and automated repository validation.
 - Added structured bug and feature-request templates.
 
+## v0.3.70 beta — 2026-08-21
+
+- Published the accepted unsigned schema-39 Windows x64 and static Linux x64 packages.
+- Added typed, content-addressed council citations with strict locator/digest normalization and explicit no-fetch/no-authority semantics.
+- Added deterministic structured minority reports that preserve the selected losing-side argument, author, position, statement, citations, endorsement count, selection rule, and report hash.
+- Bound minority reports into decision integrity while keeping legacy schema-38 council hashes verifiable.
+- Qualified a real three-tab citation-backed Control Room decision and the complete packaged 85-operation client flows on Windows and Linux.
+- Published exact SHA-256 checksums and the immutable manual-update manifest.
+
+[Release notes and downloads](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.70)
+
 ## v0.3.69 beta — 2026-08-21
 
 - Published the accepted unsigned schema-38 Windows x64 and static Linux x64 packages.
