@@ -9,6 +9,17 @@ This file records public release-channel and documentation changes. Product chan
 - Added a machine-readable current-release catalog and automated repository validation.
 - Added structured bug and feature-request templates.
 
+## v0.3.72 beta — 2026-08-21
+
+- Published the accepted unsigned schema-41 Windows x64 and static Linux x64 packages.
+- Added the first durable no-value settlement slice with signed contribution quotes, exact simulator funding and holds, participant-signed usage, isolated disputes, unrelated payouts, and double-entry receipts.
+- Added a narrow AP2 v0.2 compact ES256 closed-checkout authorization profile while retaining explicit no-live-value boundaries.
+- Expanded the generated API clients from 88 to 96 operations and qualified all eight settlement methods in packaged Windows Python/TypeScript and Linux Python flows.
+- Preserved an exact v0.3.71 terminal receipt through schema-41 migration, authenticated backup, and restore on both active platforms.
+- Published exact SHA-256 checksums and the immutable manual-update manifest.
+
+[Release notes and downloads](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.72)
+
 ## v0.3.71 beta — 2026-08-21
 
 - Published the accepted unsigned schema-40 Windows x64 and static Linux x64 packages.

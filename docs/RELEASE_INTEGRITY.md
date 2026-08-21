@@ -2,37 +2,37 @@
 
 ## Canonical artifacts
 
-The canonical public artifacts are attached to the corresponding immutable GitHub release tag. For v0.3.71, use the [release page](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.71).
+The canonical public artifacts are attached to the corresponding immutable GitHub release tag. For v0.3.72, use the [release page](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.72).
 
 Do not trust a filename by itself. Verify the complete byte length and SHA-256 value against the release page, `SHA256SUMS.txt`, and [`releases/current.json`](../releases/current.json).
 
 ## Windows verification
 
 ```powershell
-Get-FileHash .\Relay-Society-v0.3.71-windows-x64.zip -Algorithm SHA256
+Get-FileHash .\Relay-Society-v0.3.72-windows-x64.zip -Algorithm SHA256
 ```
 
 Expected digest:
 
 ```text
-9644f574cf9266e569f5f7dc9342ee71045d6f856c01c4091f537e47496ad2fc
+71bad8d9f4513082af3d9ab419ce5b1b015ee2facb5bee22fba6620d1709a205
 ```
 
-Expected byte length: `10319321`.
+Expected byte length: `10577594`.
 
 ## Linux verification
 
 ```sh
-sha256sum Relay-Society-v0.3.71-linux-x64.tar.gz
+sha256sum Relay-Society-v0.3.72-linux-x64.tar.gz
 ```
 
 Expected digest:
 
 ```text
-f5347fd9f10c85c7c2ca101fcd8c151e7185485f87816869f9c5bfca884c5a64
+cdc229d471c3ab38c9ea5f204e80a7f03c331a96e7424e0836c53b273c050c63
 ```
 
-Expected byte length: `10782000`.
+Expected byte length: `11006708`.
 
 ## What a matching checksum proves
 
@@ -40,7 +40,7 @@ A matching digest proves that the downloaded file is byte-for-byte identical to 
 
 ## What it does not prove
 
-The v0.3.71 packages are unsigned and record `sourceRevision=uncommitted-worktree`. A published checksum does not provide:
+The v0.3.72 packages are unsigned and record `sourceRevision=uncommitted-worktree`. A published checksum does not provide:
 
 - operating-system code-signing identity;
 - notarization;
@@ -53,6 +53,6 @@ These are explicitly open release-engineering gaps. The packages should be used 
 ## Machine-readable records
 
 - [`releases/current.json`](../releases/current.json) is the mutable repository catalog pointing to the current accepted release.
-- `relay.update-manifest-v0.3.71.json` on the tagged release is the immutable version-specific update manifest.
+- `relay.update-manifest-v0.3.72.json` on the tagged release is the immutable version-specific update manifest.
 - `SHA256SUMS.txt` on the tagged release contains the package digests.
 - `automaticExecution` is false. No manifest in this beta authorizes unattended replacement or execution.
