@@ -2,7 +2,7 @@
 
 ## Update policy
 
-Relay Society beta updates are manual and user-confirmed. The v0.3.69 runtime does not silently download or execute a replacement.
+Relay Society beta updates are manual and user-confirmed. The v0.3.70 runtime does not silently download or execute a replacement.
 
 GitHub Releases is the canonical binary store. The mutable [`releases/current.json`](../releases/current.json) catalog helps humans and repository checks find the current tag. Every tag also carries an immutable version-specific update manifest.
 

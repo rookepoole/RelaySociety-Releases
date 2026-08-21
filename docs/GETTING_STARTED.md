@@ -1,30 +1,30 @@
 # Relay Society beta: exact getting-started guide
 
-This guide applies to the accepted unsigned Relay Society v0.3.69/schema-38 Windows x64 and Linux x64 packages. macOS has no accepted native artifact.
+This guide applies to the accepted unsigned Relay Society v0.3.70/schema-39 Windows x64 and Linux x64 packages. macOS has no accepted native artifact.
 
 ## Download first
 
-Use only the assets attached to the [v0.3.69 GitHub release](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.69).
+Use only the assets attached to the [v0.3.70 GitHub release](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.70).
 
 | Platform | File | Required SHA-256 |
 | --- | --- | --- |
-| Windows x64 | `Relay-Society-v0.3.69-windows-x64.zip` | `29d4c92fd3117508bb5e13fe284f9a37c5049d1e171d3d1dd4e48a0d630cc17f` |
-| Linux x64 | `Relay-Society-v0.3.69-linux-x64.tar.gz` | `8b67e9fe0805a7e2843c029a9786a245a276d2446d440323f5ab25e2483eda8f` |
+| Windows x64 | `Relay-Society-v0.3.70-windows-x64.zip` | `f9bd53bf8f47c33e4295226c272fda3c18fb91359b6786f688a9b779396a9268` |
+| Linux x64 | `Relay-Society-v0.3.70-linux-x64.tar.gz` | `24e1e56afd98dc2e929382f10eca35f8ce8857d8d933f22ba2473f1458cec7bd` |
 
 Do not run a package when the complete digest differs. See [Release integrity](RELEASE_INTEGRITY.md) for verification details and limitations.
 
 ## Windows x64
 
-1. Download `Relay-Society-v0.3.69-windows-x64.zip`.
+1. Download `Relay-Society-v0.3.70-windows-x64.zip`.
 2. Open PowerShell in the download directory and run:
 
    ```powershell
-   Get-FileHash .\Relay-Society-v0.3.69-windows-x64.zip -Algorithm SHA256
+   Get-FileHash .\Relay-Society-v0.3.70-windows-x64.zip -Algorithm SHA256
    ```
 
-3. Require the complete result to equal `29d4c92fd3117508bb5e13fe284f9a37c5049d1e171d3d1dd4e48a0d630cc17f`.
+3. Require the complete result to equal `f9bd53bf8f47c33e4295226c272fda3c18fb91359b6786f688a9b779396a9268`.
 4. In File Explorer, right-click the ZIP and choose **Extract All**.
-5. Open the extracted `Relay-Society-v0.3.69-windows-x64` directory. Do not launch from inside the ZIP.
+5. Open the extracted `Relay-Society-v0.3.70-windows-x64` directory. Do not launch from inside the ZIP.
 6. Double-click **Launch Relay Society.cmd** and keep the console window open.
 7. The launcher opens the Control Room at `http://127.0.0.1:7411` and uses a one-use local sign-in code.
 8. Because this beta is unsigned, Windows can show a protection dialog. Verify the complete checksum first. If it matches, choose **More info → Run anyway**.
@@ -37,14 +37,14 @@ Runtime data remains outside the application directory at `%LOCALAPPDATA%\Relay 
 The normal desktop path requires a running, unlocked freedesktop Secret Service in the same user session, normally GNOME Keyring. Headless users must initialize the included Vault Transit path before first launch instead of weakening local key custody.
 
 ```sh
-sha256sum Relay-Society-v0.3.69-linux-x64.tar.gz
-tar -xzf Relay-Society-v0.3.69-linux-x64.tar.gz
-cd Relay-Society-v0.3.69-linux-x64
+sha256sum Relay-Society-v0.3.70-linux-x64.tar.gz
+tar -xzf Relay-Society-v0.3.70-linux-x64.tar.gz
+cd Relay-Society-v0.3.70-linux-x64
 ./Install\ for\ Current\ User.sh
 relay-society-control-room
 ```
 
-Require the complete archive checksum to equal `8b67e9fe0805a7e2843c029a9786a245a276d2446d440323f5ab25e2483eda8f`.
+Require the complete archive checksum to equal `24e1e56afd98dc2e929382f10eca35f8ce8857d8d933f22ba2473f1458cec7bd`.
 
 The installer creates a versioned current-user installation, command links, desktop entry, and user-service definition. It does not start the service. Portable users can run `./Launch\ Relay\ Society.sh` from the extracted directory.
 
@@ -72,9 +72,10 @@ Invitation possession is a task-scoped bearer capability, not cryptographic proo
 3. Each member opens the member workspace in a separate browser tab, exchanges the invitation once, and keeps the returned council bearer in that tab's memory.
 4. Create the immutable proposal. Members disclose conflicts before the owner opens voting.
 5. Set the integer quorum, approval threshold, and deadline, then open voting. Membership, conflicts, proposal, and policy freeze at this point.
-6. Eligible members add arguments, optionally endorse a losing-side argument for minority retention, and vote `approve`, `reject`, or `abstain`. Pre-close revisions remain auditable.
-7. Close after the declared conditions are met. Inspect the deterministic tally, retained minority argument, policy and membership hashes, decision hash, and event history.
-8. Choose **Verify** to recompute and validate the complete council record.
+6. Eligible members add arguments and may attach typed citations. Each citation needs a Relay artifact/receipt identifier or credential-free HTTPS locator plus the exact lowercase SHA-256 digest of the cited content. Relay preserves citations but does not fetch them or decide whether their claims are true.
+7. Members may endorse a losing-side argument for deterministic minority-report selection and vote `approve`, `reject`, or `abstain`. Pre-close revisions remain auditable.
+8. Close after the declared conditions are met. Inspect the deterministic tally, structured minority report and citations, policy and membership hashes, decision hash, and event history.
+9. Choose **Verify** to recompute and validate the complete council record.
 
 Council bearers prove distinct council-scoped authorization subjects, not one-human-one-account or physical-human identity. This release does not include amendments, delegation, veto, appeals, escalation, ranked choice, secret ballots, or federated councils.
 
@@ -88,7 +89,7 @@ A normal backup does not contain the Windows Credential Manager or Linux Secret 
 
 ## Update safely
 
-Relay v0.3.69 uses manual, user-confirmed updates. It does not automatically download or execute a replacement.
+Relay v0.3.70 uses manual, user-confirmed updates. It does not automatically download or execute a replacement.
 
 1. Complete and verify the backup steps above.
 2. Stop Relay.
