@@ -1,0 +1,36 @@
+name: Repository contract
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Validate local repository contract
+        run: python scripts/verify_repository.py
+
+      - name: Read canonical GitHub release metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="$(python -c 'import json; print(json.load(open("releases/current.json", encoding="utf-8"))["tag"])')"
+          gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json tagName,isPrerelease,assets > "$RUNNER_TEMP/relay-release.json"
+
+      - name: Compare catalog with canonical release assets
+        run: python scripts/verify_repository.py --github-release-json "$RUNNER_TEMP/relay-release.json"
