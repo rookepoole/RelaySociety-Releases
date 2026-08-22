@@ -9,6 +9,17 @@ This file records public release-channel and documentation changes. Product chan
 - Added a machine-readable current-release catalog and automated repository validation.
 - Added structured bug and feature-request templates.
 
+## v0.3.73 beta — 2026-08-22
+
+- Published the accepted unsigned schema-41 Windows x64 and static Linux x64 packages.
+- Made post-finalization dispute resolution explicitly ledger-only: the task remains terminal `disputed` and its original task and settlement receipts are never rewritten into success.
+- Bound receipt verification to the exact permitted terminal-resolution event suffix while continuing to reject arbitrary post-receipt events.
+- Exposed lifecycle policy, remaining dispute totals, and post-finalization resolution counts through the API, generated clients, and Control Room.
+- Qualified clean-installed Windows Python/TypeScript and Linux Python clients plus the v0.3.72-to-v0.3.73 same-schema upgrade, credential custody, authenticated backup, restore, and receipt preservation.
+- Published exact SHA-256 checksums and the immutable manual-update manifest.
+
+[Release notes and downloads](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.73)
+
 ## v0.3.72 beta — 2026-08-21
 
 - Published the accepted unsigned schema-41 Windows x64 and static Linux x64 packages.

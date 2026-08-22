@@ -1,30 +1,30 @@
 # Relay Society beta: exact getting-started guide
 
-This guide applies to the accepted unsigned Relay Society v0.3.72/schema-41 Windows x64 and Linux x64 packages. macOS has no accepted native artifact.
+This guide applies to the accepted unsigned Relay Society v0.3.73/schema-41 Windows x64 and Linux x64 packages. macOS has no accepted native artifact.
 
 ## Download first
 
-Use only the assets attached to the [v0.3.72 GitHub release](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.72).
+Use only the assets attached to the [v0.3.73 GitHub release](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.73).
 
 | Platform | File | Required SHA-256 |
 | --- | --- | --- |
-| Windows x64 | `Relay-Society-v0.3.72-windows-x64.zip` | `71bad8d9f4513082af3d9ab419ce5b1b015ee2facb5bee22fba6620d1709a205` |
-| Linux x64 | `Relay-Society-v0.3.72-linux-x64.tar.gz` | `cdc229d471c3ab38c9ea5f204e80a7f03c331a96e7424e0836c53b273c050c63` |
+| Windows x64 | `Relay-Society-v0.3.73-windows-x64.zip` | `d3e0d405c5cf7bf3012e70ed19383444fe613f5a7a9171c3a05f85ccfad8810f` |
+| Linux x64 | `Relay-Society-v0.3.73-linux-x64.tar.gz` | `da3687256d004424d67a8a3d6ec6fe1cdcc6c666e5e9a0d7783e00bc046535a9` |
 
 Do not run a package when the complete digest differs. See [Release integrity](RELEASE_INTEGRITY.md) for verification details and limitations.
 
 ## Windows x64
 
-1. Download `Relay-Society-v0.3.72-windows-x64.zip`.
+1. Download `Relay-Society-v0.3.73-windows-x64.zip`.
 2. Open PowerShell in the download directory and run:
 
    ```powershell
-   Get-FileHash .\Relay-Society-v0.3.72-windows-x64.zip -Algorithm SHA256
+   Get-FileHash .\Relay-Society-v0.3.73-windows-x64.zip -Algorithm SHA256
    ```
 
-3. Require the complete result to equal `71bad8d9f4513082af3d9ab419ce5b1b015ee2facb5bee22fba6620d1709a205`.
+3. Require the complete result to equal `d3e0d405c5cf7bf3012e70ed19383444fe613f5a7a9171c3a05f85ccfad8810f`.
 4. In File Explorer, right-click the ZIP and choose **Extract All**.
-5. Open the extracted `Relay-Society-v0.3.72-windows-x64` directory. Do not launch from inside the ZIP.
+5. Open the extracted `Relay-Society-v0.3.73-windows-x64` directory. Do not launch from inside the ZIP.
 6. Double-click **Launch Relay Society.cmd** and keep the console window open.
 7. The launcher opens the Control Room at `http://127.0.0.1:7411` and uses a one-use local sign-in code.
 8. Because this beta is unsigned, Windows can show a protection dialog. Verify the complete checksum first. If it matches, choose **More info → Run anyway**.
@@ -37,14 +37,14 @@ Runtime data remains outside the application directory at `%LOCALAPPDATA%\Relay 
 The normal desktop path requires a running, unlocked freedesktop Secret Service in the same user session, normally GNOME Keyring. Headless users must initialize the included Vault Transit path before first launch instead of weakening local key custody.
 
 ```sh
-sha256sum Relay-Society-v0.3.72-linux-x64.tar.gz
-tar -xzf Relay-Society-v0.3.72-linux-x64.tar.gz
-cd Relay-Society-v0.3.72-linux-x64
+sha256sum Relay-Society-v0.3.73-linux-x64.tar.gz
+tar -xzf Relay-Society-v0.3.73-linux-x64.tar.gz
+cd Relay-Society-v0.3.73-linux-x64
 ./Install\ for\ Current\ User.sh
 relay-society-control-room
 ```
 
-Require the complete archive checksum to equal `cdc229d471c3ab38c9ea5f204e80a7f03c331a96e7424e0836c53b273c050c63`.
+Require the complete archive checksum to equal `da3687256d004424d67a8a3d6ec6fe1cdcc6c666e5e9a0d7783e00bc046535a9`.
 
 The installer creates a versioned current-user installation, command links, desktop entry, and user-service definition. It does not start the service. Portable users can run `./Launch\ Relay\ Society.sh` from the extracted directory.
 
@@ -103,7 +103,7 @@ A normal backup does not contain the Windows Credential Manager or Linux Secret 
 
 ## Update safely
 
-Relay v0.3.72 uses manual, user-confirmed updates. It does not automatically download or execute a replacement.
+Relay v0.3.73 uses manual, user-confirmed updates. It does not automatically download or execute a replacement.
 
 1. Complete and verify the backup steps above.
 2. Stop Relay.

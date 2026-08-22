@@ -4,20 +4,20 @@
 
 Relay Society is a local-first runtime and Control Room for creating exact task contracts, granting bounded authority, running durable work, retaining evidence, and closing successful tasks with signed receipts.
 
-[Download the latest beta](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.72) · [Exact setup guide](docs/GETTING_STARTED.md) · [Capabilities](docs/CAPABILITIES.md) · [Security](SECURITY.md) · [Report a problem](https://github.com/rookepoole/RelaySociety-Releases/issues/new/choose)
+[Download the latest beta](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.73) · [Exact setup guide](docs/GETTING_STARTED.md) · [Capabilities](docs/CAPABILITIES.md) · [Security](SECURITY.md) · [Report a problem](https://github.com/rookepoole/RelaySociety-Releases/issues/new/choose)
 
 > [!WARNING]
-> Relay Society v0.3.72 is an **unsigned beta**. Windows and Linux x64 packages are available; there is no accepted macOS build yet. Verify the complete SHA-256 digest before running a package. Checksums detect changed bytes, but they are not a substitute for code signing or independently attested provenance.
+> Relay Society v0.3.73 is an **unsigned beta**. Windows and Linux x64 packages are available; there is no accepted macOS build yet. Verify the complete SHA-256 digest before running a package. Checksums detect changed bytes, but they are not a substitute for code signing or independently attested provenance.
 
-## Download v0.3.72 beta
+## Download v0.3.73 beta
 
 | Platform | Package | Size | SHA-256 |
 | --- | --- | ---: | --- |
-| Windows 10/11 x64 | [Portable ZIP](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.72/Relay-Society-v0.3.72-windows-x64.zip) | 10,577,594 bytes | `71bad8d9f4513082af3d9ab419ce5b1b015ee2facb5bee22fba6620d1709a205` |
-| Linux x64, static musl | [tar.gz](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.72/Relay-Society-v0.3.72-linux-x64.tar.gz) | 11,006,708 bytes | `cdc229d471c3ab38c9ea5f204e80a7f03c331a96e7424e0836c53b273c050c63` |
+| Windows 10/11 x64 | [Portable ZIP](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.73/Relay-Society-v0.3.73-windows-x64.zip) | 10,588,790 bytes | `d3e0d405c5cf7bf3012e70ed19383444fe613f5a7a9171c3a05f85ccfad8810f` |
+| Linux x64, static musl | [tar.gz](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.73/Relay-Society-v0.3.73-linux-x64.tar.gz) | 11,016,548 bytes | `da3687256d004424d67a8a3d6ec6fe1cdcc6c666e5e9a0d7783e00bc046535a9` |
 | macOS | Not available | — | Native qualification, signing, and notarization remain open |
 
-The [v0.3.72 release page](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.72) also contains `SHA256SUMS.txt`, release notes, and the immutable machine-readable update manifest. [`releases/current.json`](releases/current.json) is the repository's human- and machine-readable release catalog; it does not authorize automatic execution.
+The [v0.3.73 release page](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.73) also contains `SHA256SUMS.txt`, release notes, and the immutable machine-readable update manifest. [`releases/current.json`](releases/current.json) is the repository's human- and machine-readable release catalog; it does not authorize automatic execution.
 
 ## Start in a few minutes
 
@@ -27,7 +27,7 @@ The [v0.3.72 release page](https://github.com/rookepoole/RelaySociety-Releases/r
 2. Verify it in PowerShell:
 
    ```powershell
-   Get-FileHash .\Relay-Society-v0.3.72-windows-x64.zip -Algorithm SHA256
+   Get-FileHash .\Relay-Society-v0.3.73-windows-x64.zip -Algorithm SHA256
    ```
 
 3. Require the complete digest to match the Windows value above.
@@ -42,9 +42,9 @@ Windows can show a protection warning because the beta is unsigned. Only continu
 The normal desktop path requires an unlocked freedesktop Secret Service in the same user session, normally GNOME Keyring.
 
 ```sh
-sha256sum Relay-Society-v0.3.72-linux-x64.tar.gz
-tar -xzf Relay-Society-v0.3.72-linux-x64.tar.gz
-cd Relay-Society-v0.3.72-linux-x64
+sha256sum Relay-Society-v0.3.73-linux-x64.tar.gz
+tar -xzf Relay-Society-v0.3.73-linux-x64.tar.gz
+cd Relay-Society-v0.3.73-linux-x64
 ./Install\ for\ Current\ User.sh
 relay-society-control-room
 ```
@@ -62,7 +62,7 @@ See [Getting started](docs/GETTING_STARTED.md) for the complete first-task, back
 - Lets the assignee submit retained evidence and the requester finalize every exact contract check once.
 - Produces append-only event chains, signed terminal receipts, portable evidence bundles, and context-specific early reputation observations.
 - Runs the governed-council slice with distinct council principals, typed content-addressed citations, conflict exclusion, vote revision, deterministic close, structured minority reports, named-authority appeal/review/escalation/veto records, derived effective disposition, and integrity verification.
-- Runs the bounded no-value settlement slice with signed contribution quotes, exact simulator funding and holds, signed usage evidence, isolated disputes, unrelated payouts, and immutable double-entry receipts.
+- Runs the bounded no-value settlement slice with signed contribution quotes, exact simulator funding and holds, signed usage evidence, isolated disputes, unrelated payouts, and immutable double-entry receipts. Post-finalization resolution is ledger-only: a terminal `disputed` task and its original signed receipts are never rewritten into success.
 - Stores the master key in Windows Credential Manager or Linux Secret Service and keeps provider credentials sealed.
 - Provides transactional backup, verification, restore, portable recovery, and read-only diagnostics.
 - Ships a 96-operation versioned REST API, OpenAPI 3.1.1 contract, and deterministic Python and TypeScript clients.

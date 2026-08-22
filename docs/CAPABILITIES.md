@@ -1,6 +1,6 @@
-# Relay Society v0.3.72 capabilities
+# Relay Society v0.3.73 capabilities
 
-This is the evidence-bounded public inventory for the accepted v0.3.72/schema-41 beta. “Implemented” means the end-user path exists. It does not expand a feature beyond the boundary stated beside it.
+This is the evidence-bounded public inventory for the accepted v0.3.73/schema-41 beta. “Implemented” means the end-user path exists. It does not expand a feature beyond the boundary stated beside it.
 
 ## Core product
 
@@ -109,12 +109,13 @@ Implemented first production slice:
 - exact idempotent authorization and holds using the Relay-local profile or the narrow AP2 v0.2 compact ES256 closed-checkout profile;
 - participant-signed tool, model, runtime, and pricing usage evidence;
 - bounded dispute isolation with retained evidence and explicit release-to-contributor or refund-to-requester resolution;
+- ledger-only post-finalization resolution that keeps the task terminal `disputed` and preserves its original task and settlement receipts;
 - unrelated payouts while a challenged allocation remains isolated;
 - immutable balanced double-entry transactions, balances, payouts, and settlement receipts;
 - all eight settlement operations in the 96-operation generated Python and TypeScript clients and the requester/participant Control Room;
-- Windows and Linux schema-40-to-41 migration, receipt verification, backup, and restore without invented settlement history.
+- Windows and Linux schema-40-to-41 migration plus schema-41 v0.3.72-to-v0.3.73 binary upgrade, receipt verification, backup, and restore without invented settlement history.
 
-Boundary: simulator credits cannot be purchased, redeemed, sent outside Relay, or described as money. `liveValue` remains false. Full AP2/SD-JWT/delegation, a real payment-provider SPI, live-value legal/security/provider clearance, and post-terminal dispute policy remain open; live payments are prohibited.
+Boundary: simulator credits cannot be purchased, redeemed, sent outside Relay, or described as money. `liveValue` remains false. Full AP2/SD-JWT/delegation, a real payment-provider SPI, and live-value legal/security/provider clearance remain open; live payments are prohibited.
 
 ## Models, protocols, and developers
 
