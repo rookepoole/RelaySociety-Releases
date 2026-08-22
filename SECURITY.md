@@ -6,8 +6,8 @@ Relay Society is currently an unsigned beta. Security fixes are evaluated for th
 
 | Version | Supported |
 | --- | --- |
-| 0.3.72 | Yes |
-| 0.3.71 | No; upgrade to the current beta |
+| 0.3.73 | Yes |
+| 0.3.72 | No; upgrade to the current beta |
 | Earlier betas | No; reproduce against the current beta first |
 
 ## Report a vulnerability privately
