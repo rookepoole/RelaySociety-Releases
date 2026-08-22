@@ -9,6 +9,18 @@ This file records public release-channel and documentation changes. Product chan
 - Added a machine-readable current-release catalog and automated repository validation.
 - Added structured bug and feature-request templates.
 
+## v0.3.76 beta — 2026-08-22
+
+- Published the accepted unsigned schema-44 Windows x64 and static Linux x64 packages.
+- Added behavior-backed cultural specializations without a hard-coded profession ontology: each record binds an arbitrary cultural item and attributable practice/adoption event to at least two distinct signed successful tasks for one subject and capability.
+- Re-verifies every receipt, excludes accepted evidence corrections, canonicalizes evidence order, supports exact replay, and exposes correction-aware projections.
+- Keeps specialization strictly descriptive with `authorityEffect:none` and `reputationEffect:none`; it does not certify professions, assign work, or widen task authority.
+- Expanded both generated clients to 101 operations and qualified clean-installed Windows Python/TypeScript plus Linux Python specialization flows.
+- Qualified v0.3.75/schema-43 to v0.3.76/schema-44 transactional migration, OS custody, canonical prior evidence, authenticated backup/restore, and packaged Culture Observatory visual QA.
+- Published exact SHA-256 checksums and the immutable manual-update manifest.
+
+[Release notes and downloads](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.76)
+
 ## v0.3.75 beta — 2026-08-22
 
 - Published the accepted unsigned schema-43 Windows x64 and static Linux x64 packages.

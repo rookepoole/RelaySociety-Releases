@@ -2,34 +2,34 @@
   "catalogVersion": 1,
   "product": "Relay Society",
   "channel": "beta",
-  "version": "0.3.75",
-  "tag": "v0.3.75",
-  "schema": 43,
+  "version": "0.3.76",
+  "tag": "v0.3.76",
+  "schema": 44,
   "prerelease": true,
   "signed": false,
   "automaticExecution": false,
-  "releasePage": "https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.75",
-  "checksums": "https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.75/SHA256SUMS.txt",
-  "updateManifest": "https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.75/relay.update-manifest-v0.3.75.json",
+  "releasePage": "https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.76",
+  "checksums": "https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.76/SHA256SUMS.txt",
+  "updateManifest": "https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.76/relay.update-manifest-v0.3.76.json",
   "platforms": [
     {
       "platform": "windows",
       "architecture": "x86_64",
       "format": "zip",
-      "file": "Relay-Society-v0.3.75-windows-x64.zip",
-      "bytes": 10517241,
-      "sha256": "159e1d6a015de2b357f5fb8870f71d886d5d7be777580900c90a37c4e8c9c674",
-      "url": "https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.75/Relay-Society-v0.3.75-windows-x64.zip"
+      "file": "Relay-Society-v0.3.76-windows-x64.zip",
+      "bytes": 10589025,
+      "sha256": "42e00042e8e2c6ed2869b82a3a1d01311daa325b194be4a6897b4c13c91aa78f",
+      "url": "https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.76/Relay-Society-v0.3.76-windows-x64.zip"
     },
     {
       "platform": "linux",
       "architecture": "x86_64",
       "format": "tar.gz",
       "libc": "musl",
-      "file": "Relay-Society-v0.3.75-linux-x64.tar.gz",
-      "bytes": 11231437,
-      "sha256": "a559492d2659054245e3160d7a76c17ce254f1a6e7d813e5beb85049d94e9393",
-      "url": "https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.75/Relay-Society-v0.3.75-linux-x64.tar.gz"
+      "file": "Relay-Society-v0.3.76-linux-x64.tar.gz",
+      "bytes": 11289544,
+      "sha256": "c1c70921fbddde2ae5b08b0619da13c6ef816dc5a143cc967bd8d5be4e50e853",
+      "url": "https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.76/Relay-Society-v0.3.76-linux-x64.tar.gz"
     }
   ],
   "unsupportedPlatforms": [
