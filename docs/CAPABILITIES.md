@@ -1,6 +1,6 @@
-# Relay Society v0.3.77 capabilities
+# Relay Society v0.3.78 capabilities
 
-This is the evidence-bounded public inventory for the accepted v0.3.77/schema-44 beta. “Implemented” means the end-user path exists. It does not expand a feature beyond the boundary stated beside it.
+This is the evidence-bounded public inventory for the accepted v0.3.78/schema-45 beta. “Implemented” means the end-user path exists. It does not expand a feature beyond the boundary stated beside it.
 
 ## Core product
 
@@ -112,8 +112,8 @@ Implemented first production slice:
 - ledger-only post-finalization resolution that keeps the task terminal `disputed` and preserves its original task and settlement receipts;
 - unrelated payouts while a challenged allocation remains isolated;
 - immutable balanced double-entry transactions, balances, payouts, and settlement receipts;
-- all eight settlement operations in the 102-operation generated Python and TypeScript clients and the requester/participant Control Room;
-- Windows and Linux schema-40-to-41 migration, the schema-41 v0.3.72-to-v0.3.73 binary upgrade, schema-41-to-43 v0.3.73-to-v0.3.75 migration, schema-43-to-44 v0.3.75-to-v0.3.76 migration, and v0.3.76-to-v0.3.77 same-schema upgrade with receipt verification, backup, and restore without invented settlement or cultural history.
+- all eight settlement operations in the 103-operation generated Python and TypeScript clients and the requester/participant Control Room;
+- Windows and Linux schema-40-to-41 migration, the schema-41 v0.3.72-to-v0.3.73 binary upgrade, schema-41-to-43 v0.3.73-to-v0.3.75 migration, schema-43-to-44 v0.3.75-to-v0.3.76 migration, v0.3.76-to-v0.3.77 same-schema upgrade, and schema-44-to-45 v0.3.77-to-v0.3.78 migration with receipt verification, backup, and restore without invented settlement or cultural history.
 
 Boundary: simulator credits cannot be purchased, redeemed, sent outside Relay, or described as money. `liveValue` remains false. Full AP2/SD-JWT/delegation, a real payment-provider SPI, and live-value legal/security/provider clearance remain open; live payments are prohibited.
 
@@ -132,10 +132,11 @@ Implemented bounded production slice:
 - behavior-backed specialization records that bind an arbitrary cultural item and exact subject's practice/adoption event to 2–32 distinct signed `verified_success` task observations for one capability;
 - canonical evidence ordering, exact replay, receipt re-verification, accepted-correction exclusion, label-blind evidence hashing, and correction-aware projections;
 - automatic derivation of every eligible label-blind candidate from retained culture and signed task evidence, plus one no-body operation that retains all missing candidates without caller-selected subjects, labels, capabilities, observations, identifiers, or idempotency keys;
-- a packaged Culture Observatory and all six cultural operations in the 102-operation generated clients;
-- Windows Python/TypeScript and Linux Python package qualification, Windows browser visual qualification, schema-43-to-44 migration, v0.3.76-to-v0.3.77 same-schema upgrade, and exact Culture Observatory backup/restore preservation.
+- a bounded exact-assignee model-backed cultural-cycle operation with frozen task/provider/model/context bindings, strict open-vocabulary proposal validation, Relay-derived identifiers, append-only round/provider/artifact hashes, explicit invalid-output rejection, exact replay, restart recovery, and no authority or reputation effect;
+- a packaged Culture Observatory and all seven cultural operations in the 103-operation generated clients;
+- Windows Python/TypeScript and Linux Python package qualification, real local-Ollama execution on Windows, Windows browser visual qualification, schema-44-to-45 migration, and exact Culture Observatory backup/restore preservation.
 
-Boundary: Relay provides general lineage, interaction, adoption/rejection, diffusion, and evidence-backed specialization mechanics rather than hard-coded traditions, professions, slang, institutions, rival schools, technologies, or myths. Culture and specialization are descriptive evidence, not correctness, profession certification, work assignment, reputation, or authority. The lab is synthetic and does not impersonate agents or create live cultural artifacts. Autonomous/model-backed cycles, bounded memory/scarcity/population treatments, consequential institutions, broader drift/polarization/schism/uncertainty metrics, and society-scale pagination remain open.
+Boundary: Relay provides general lineage, interaction, adoption/rejection, diffusion, evidence-backed specialization, and manually invoked model-generation mechanics rather than hard-coded traditions, professions, slang, institutions, rival schools, technologies, or myths. Culture and specialization are descriptive evidence, not correctness, profession certification, work assignment, reputation, or authority. The lab is synthetic and does not impersonate agents or create live cultural artifacts. Unattended scheduling, bounded memory/scarcity/population treatments, consequential institutions, broader drift/polarization/schism/uncertainty metrics, and society-scale pagination remain open.
 
 ## Models, protocols, and developers
 
@@ -143,14 +144,14 @@ Boundary: Relay provides general lineage, interaction, adoption/rejection, diffu
 
 Implemented:
 
-- immutable OpenAI-compatible provider profiles;
+- immutable OpenAI-compatible provider profiles with arbitrary operator-selected model strings;
 - provider-key injection without exposing the key to an assignee;
 - bounded, non-redirecting non-streaming chat requests;
 - normalized results, durable replay, and explicit indeterminate state;
-- local Ollama setup for `qwen2.5:3b`;
+- Windows and Linux local Ollama helpers that discover/list installed models and accept an exact user choice;
 - evidence reconciliation for deliberately compatible services.
 
-Boundary: provider OAuth, the OpenAI Responses API, and general streaming are not implemented.
+Boundary: v0.3.78 still uses non-streaming OpenAI-compatible Chat Completions. Native Ollama, OpenAI Responses, Anthropic Messages, Gemini Interactions, provider OAuth/enterprise identity transports, general streaming, and third-party driver extensions are not yet implemented. The qualified `qwen3:8b` model is not a dependency and this release does not claim universal model access.
 
 ### Framework integrations — Advanced beta
 
@@ -213,7 +214,7 @@ Implemented:
 - structured server and SDK errors;
 - health and readiness with transport truth;
 - SQLite WAL, transactional migrations, and newer-schema refusal;
-- 100 current JSON request/response operations.
+- 103 generated JSON request/response operations across 100 paths.
 
 Boundary: the generated clients and OpenAPI document ship inside the platform packages. This release repository is not yet the complete development source tree.
 
@@ -242,6 +243,6 @@ Boundary: narrow verified slices exist. Automatic enrollment, a complete remote-
 | G5 | Governed councils | Partial; first production slice is accepted on Windows and Linux |
 | G6 | Federation | Partial |
 | G7 | Settlement | Partial; the bounded no-value simulator slice is accepted, while live-value settlement remains prohibited |
-| G8 | Society laboratory | Partial; shared culture, automatic descriptive specialization discovery, and the bounded deterministic diffusion lab are accepted on Windows and Linux |
+| G8 | Society laboratory | Partial; shared culture, automatic descriptive specialization discovery, bounded manually invoked model cycles, and the deterministic diffusion lab are accepted on Windows and Linux |
 
-The next release-critical gaps are source publication and repeatable CI provenance, signed packages, safe native updating and rollback, and independent-machine evidence. Native macOS remains deferred until after the Windows/Linux 1.0 path. Gate 8 additionally needs autonomous cultural cycles, profession certification or automatic work assignment, consequential institutions, wider metrics/uncertainty, and society-scale observation.
+The next release-critical gaps are native universal provider drivers, source publication and repeatable CI provenance, signed packages, safe native updating and rollback, and independent-machine evidence. Native macOS remains deferred until after the Windows/Linux 1.0 path. Gate 8 additionally needs unattended multi-agent cultural scheduling, profession certification or automatic work assignment, consequential institutions, wider metrics/uncertainty, and society-scale observation.
