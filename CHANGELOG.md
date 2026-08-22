@@ -9,6 +9,18 @@ This file records public release-channel and documentation changes. Product chan
 - Added a machine-readable current-release catalog and automated repository validation.
 - Added structured bug and feature-request templates.
 
+## v0.3.75 beta — 2026-08-22
+
+- Published the accepted unsigned schema-43 Windows x64 and static Linux x64 packages.
+- Added separately authenticated same-task culture members that can create and contest arbitrary cultural vocabulary without receiving assignee/task authority.
+- Added immutable origin, mutation, and recombination lineages plus attributable adopt, reject, teach, practice, retire, and revive events.
+- Added a deterministic requester-only Society Lab with exact replay, label-blind mechanics, durable receipts, `persistedArtifacts:false`, and `authorityEffect:none`.
+- Added the packaged Culture Observatory and expanded both generated clients to 100 operations.
+- Qualified v0.3.73/schema-41 to v0.3.75/schema-43 transactional migration, OS custody, canonical prior evidence, authenticated backup/restore, packaged clients, and the Windows browser flow.
+- Published exact SHA-256 checksums and the immutable manual-update manifest.
+
+[Release notes and downloads](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.75)
+
 ## v0.3.73 beta — 2026-08-22
 
 - Published the accepted unsigned schema-41 Windows x64 and static Linux x64 packages.

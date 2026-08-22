@@ -4,20 +4,20 @@
 
 Relay Society is a local-first runtime and Control Room for creating exact task contracts, granting bounded authority, running durable work, retaining evidence, and closing successful tasks with signed receipts.
 
-[Download the latest beta](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.73) · [Exact setup guide](docs/GETTING_STARTED.md) · [Capabilities](docs/CAPABILITIES.md) · [Security](SECURITY.md) · [Report a problem](https://github.com/rookepoole/RelaySociety-Releases/issues/new/choose)
+[Download the latest beta](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.75) · [Exact setup guide](docs/GETTING_STARTED.md) · [Capabilities](docs/CAPABILITIES.md) · [Security](SECURITY.md) · [Report a problem](https://github.com/rookepoole/RelaySociety-Releases/issues/new/choose)
 
 > [!WARNING]
-> Relay Society v0.3.73 is an **unsigned beta**. Windows and Linux x64 packages are available; there is no accepted macOS build yet. Verify the complete SHA-256 digest before running a package. Checksums detect changed bytes, but they are not a substitute for code signing or independently attested provenance.
+> Relay Society v0.3.75 is an **unsigned beta**. Windows and Linux x64 packages are available; there is no accepted macOS build yet. Verify the complete SHA-256 digest before running a package. Checksums detect changed bytes, but they are not a substitute for code signing or independently attested provenance.
 
-## Download v0.3.73 beta
+## Download v0.3.75 beta
 
 | Platform | Package | Size | SHA-256 |
 | --- | --- | ---: | --- |
-| Windows 10/11 x64 | [Portable ZIP](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.73/Relay-Society-v0.3.73-windows-x64.zip) | 10,588,790 bytes | `d3e0d405c5cf7bf3012e70ed19383444fe613f5a7a9171c3a05f85ccfad8810f` |
-| Linux x64, static musl | [tar.gz](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.73/Relay-Society-v0.3.73-linux-x64.tar.gz) | 11,016,548 bytes | `da3687256d004424d67a8a3d6ec6fe1cdcc6c666e5e9a0d7783e00bc046535a9` |
+| Windows 10/11 x64 | [Portable ZIP](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.75/Relay-Society-v0.3.75-windows-x64.zip) | 10,517,241 bytes | `159e1d6a015de2b357f5fb8870f71d886d5d7be777580900c90a37c4e8c9c674` |
+| Linux x64, static musl | [tar.gz](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.75/Relay-Society-v0.3.75-linux-x64.tar.gz) | 11,231,437 bytes | `a559492d2659054245e3160d7a76c17ce254f1a6e7d813e5beb85049d94e9393` |
 | macOS | Not available | — | Native qualification, signing, and notarization remain open |
 
-The [v0.3.73 release page](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.73) also contains `SHA256SUMS.txt`, release notes, and the immutable machine-readable update manifest. [`releases/current.json`](releases/current.json) is the repository's human- and machine-readable release catalog; it does not authorize automatic execution.
+The [v0.3.75 release page](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.75) also contains `SHA256SUMS.txt`, release notes, and the immutable machine-readable update manifest. [`releases/current.json`](releases/current.json) is the repository's human- and machine-readable release catalog; it does not authorize automatic execution.
 
 ## Start in a few minutes
 
@@ -27,7 +27,7 @@ The [v0.3.73 release page](https://github.com/rookepoole/RelaySociety-Releases/r
 2. Verify it in PowerShell:
 
    ```powershell
-   Get-FileHash .\Relay-Society-v0.3.73-windows-x64.zip -Algorithm SHA256
+   Get-FileHash .\Relay-Society-v0.3.75-windows-x64.zip -Algorithm SHA256
    ```
 
 3. Require the complete digest to match the Windows value above.
@@ -42,9 +42,9 @@ Windows can show a protection warning because the beta is unsigned. Only continu
 The normal desktop path requires an unlocked freedesktop Secret Service in the same user session, normally GNOME Keyring.
 
 ```sh
-sha256sum Relay-Society-v0.3.73-linux-x64.tar.gz
-tar -xzf Relay-Society-v0.3.73-linux-x64.tar.gz
-cd Relay-Society-v0.3.73-linux-x64
+sha256sum Relay-Society-v0.3.75-linux-x64.tar.gz
+tar -xzf Relay-Society-v0.3.75-linux-x64.tar.gz
+cd Relay-Society-v0.3.75-linux-x64
 ./Install\ for\ Current\ User.sh
 relay-society-control-room
 ```
@@ -63,12 +63,14 @@ See [Getting started](docs/GETTING_STARTED.md) for the complete first-task, back
 - Produces append-only event chains, signed terminal receipts, portable evidence bundles, and context-specific early reputation observations.
 - Runs the governed-council slice with distinct council principals, typed content-addressed citations, conflict exclusion, vote revision, deterministic close, structured minority reports, named-authority appeal/review/escalation/veto records, derived effective disposition, and integrity verification.
 - Runs the bounded no-value settlement slice with signed contribution quotes, exact simulator funding and holds, signed usage evidence, isolated disputes, unrelated payouts, and immutable double-entry receipts. Post-finalization resolution is ledger-only: a terminal `disputed` task and its original signed receipts are never rewritten into success.
+- Lets independently authenticated culture-only members and the assignee create arbitrary traditions, slang, technologies, myths, schools, professions, institutions, and other runtime-defined cultural artifacts through general lineage and behavior mechanics without granting task authority.
+- Runs a deterministic seeded Society Lab whose label-blind traces are exactly replayable and explicitly synthetic; lab outputs never impersonate agents, become live culture, or gain Relay authority.
 - Stores the master key in Windows Credential Manager or Linux Secret Service and keeps provider credentials sealed.
 - Provides transactional backup, verification, restore, portable recovery, and read-only diagnostics.
-- Ships a 96-operation versioned REST API, OpenAPI 3.1.1 contract, and deterministic Python and TypeScript clients.
+- Ships a 100-operation versioned REST API, OpenAPI 3.1.1 contract, and deterministic Python and TypeScript clients.
 - Includes bounded integration slices for MCP, A2A, signed webhooks, OpenAI-compatible providers, Ollama, and five agent frameworks.
 
-The packages contain the real schema-41 runtime and Control Room. They are not mock or demonstration-only bundles. The full evidence-bounded capability inventory is in [CAPABILITIES.md](docs/CAPABILITIES.md).
+The packages contain the real schema-43 runtime and Control Room. They are not mock or demonstration-only bundles. The full evidence-bounded capability inventory is in [CAPABILITIES.md](docs/CAPABILITIES.md).
 
 ## The governed task lifecycle
 
