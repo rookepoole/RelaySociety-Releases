@@ -2,7 +2,7 @@
 
 ## Update policy
 
-Relay Society beta updates are manual and user-confirmed. The v0.3.79 runtime does not silently download or execute a replacement.
+Relay Society beta updates are manual and user-confirmed. The v0.3.80 runtime does not silently download or execute a replacement.
 
 GitHub Releases is the canonical binary store. The mutable [`releases/current.json`](../releases/current.json) catalog helps humans and repository checks find the current tag. Every tag also carries an immutable version-specific update manifest.
 
@@ -30,7 +30,7 @@ The normal backup does not contain the Windows Credential Manager or Linux Secre
 
 SQLite migrations are numbered and transactional. A binary older than the current data schema refuses to open it.
 
-The exact v0.3.71/schema-40 to v0.3.72/schema-41 adjacent migration and v0.3.72-to-v0.3.73 same-schema upgrade remain qualified. The exact v0.3.73/schema-41 to v0.3.75/schema-43 migration and v0.3.75/schema-43 to v0.3.76/schema-44 migration install the cultural schemas transactionally. The v0.3.76-to-v0.3.77 same-schema upgrade, v0.3.77/schema-44 to v0.3.78/schema-45 migration, and v0.3.78/schema-45 to v0.3.79/schema-46 migration are qualified on Windows Credential Manager and Linux Secret Service. These paths preserve canonical task, event, artifact, receipt, settlement, culture, specialization, provider, and credential-custody state, verify the prior receipt, and pass authenticated backup/restore plus post-restore diagnostics. This evidence does not replace the user's own backup.
+The exact v0.3.71/schema-40 to v0.3.72/schema-41 adjacent migration and v0.3.72-to-v0.3.73 same-schema upgrade remain qualified. The exact v0.3.73/schema-41 to v0.3.75/schema-43 migration and v0.3.75/schema-43 to v0.3.76/schema-44 migration install the cultural schemas transactionally. The v0.3.76-to-v0.3.77 same-schema upgrade, v0.3.77/schema-44 to v0.3.78/schema-45 migration, v0.3.78/schema-45 to v0.3.79/schema-46 migration, and v0.3.79/schema-46 to v0.3.80/schema-47 migration are qualified on Windows Credential Manager and Linux Secret Service. These paths preserve canonical task, event, artifact, receipt, settlement, culture, specialization, provider, schedule, and credential-custody state, verify the prior receipt, and pass authenticated backup/restore plus post-restore diagnostics. This evidence does not replace the user's own backup.
 
 ## Rollback
 
