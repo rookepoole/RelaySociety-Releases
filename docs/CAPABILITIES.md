@@ -1,6 +1,6 @@
-# Relay Society v0.3.76 capabilities
+# Relay Society v0.3.77 capabilities
 
-This is the evidence-bounded public inventory for the accepted v0.3.76/schema-44 beta. “Implemented” means the end-user path exists. It does not expand a feature beyond the boundary stated beside it.
+This is the evidence-bounded public inventory for the accepted v0.3.77/schema-44 beta. “Implemented” means the end-user path exists. It does not expand a feature beyond the boundary stated beside it.
 
 ## Core product
 
@@ -112,8 +112,8 @@ Implemented first production slice:
 - ledger-only post-finalization resolution that keeps the task terminal `disputed` and preserves its original task and settlement receipts;
 - unrelated payouts while a challenged allocation remains isolated;
 - immutable balanced double-entry transactions, balances, payouts, and settlement receipts;
-- all eight settlement operations in the 101-operation generated Python and TypeScript clients and the requester/participant Control Room;
-- Windows and Linux schema-40-to-41 migration, the schema-41 v0.3.72-to-v0.3.73 binary upgrade, schema-41-to-43 v0.3.73-to-v0.3.75 migration, and schema-43-to-44 v0.3.75-to-v0.3.76 migration with receipt verification, backup, and restore without invented settlement or cultural history.
+- all eight settlement operations in the 102-operation generated Python and TypeScript clients and the requester/participant Control Room;
+- Windows and Linux schema-40-to-41 migration, the schema-41 v0.3.72-to-v0.3.73 binary upgrade, schema-41-to-43 v0.3.73-to-v0.3.75 migration, schema-43-to-44 v0.3.75-to-v0.3.76 migration, and v0.3.76-to-v0.3.77 same-schema upgrade with receipt verification, backup, and restore without invented settlement or cultural history.
 
 Boundary: simulator credits cannot be purchased, redeemed, sent outside Relay, or described as money. `liveValue` remains false. Full AP2/SD-JWT/delegation, a real payment-provider SPI, and live-value legal/security/provider clearance remain open; live payments are prohibited.
 
@@ -131,8 +131,9 @@ Implemented bounded production slice:
 - immutable lab receipts with complete traces, structural/label/result hashes, `persistedArtifacts:false`, and `authorityEffect:none`;
 - behavior-backed specialization records that bind an arbitrary cultural item and exact subject's practice/adoption event to 2–32 distinct signed `verified_success` task observations for one capability;
 - canonical evidence ordering, exact replay, receipt re-verification, accepted-correction exclusion, label-blind evidence hashing, and correction-aware projections;
-- a packaged Culture Observatory and all five cultural operations in the 101-operation generated clients;
-- Windows Python/TypeScript and Linux Python package qualification, Windows browser visual qualification, schema-43-to-44 migration, and exact Culture Observatory backup/restore preservation.
+- automatic derivation of every eligible label-blind candidate from retained culture and signed task evidence, plus one no-body operation that retains all missing candidates without caller-selected subjects, labels, capabilities, observations, identifiers, or idempotency keys;
+- a packaged Culture Observatory and all six cultural operations in the 102-operation generated clients;
+- Windows Python/TypeScript and Linux Python package qualification, Windows browser visual qualification, schema-43-to-44 migration, v0.3.76-to-v0.3.77 same-schema upgrade, and exact Culture Observatory backup/restore preservation.
 
 Boundary: Relay provides general lineage, interaction, adoption/rejection, diffusion, and evidence-backed specialization mechanics rather than hard-coded traditions, professions, slang, institutions, rival schools, technologies, or myths. Culture and specialization are descriptive evidence, not correctness, profession certification, work assignment, reputation, or authority. The lab is synthetic and does not impersonate agents or create live cultural artifacts. Autonomous/model-backed cycles, bounded memory/scarcity/population treatments, consequential institutions, broader drift/polarization/schism/uncertainty metrics, and society-scale pagination remain open.
 
@@ -241,6 +242,6 @@ Boundary: narrow verified slices exist. Automatic enrollment, a complete remote-
 | G5 | Governed councils | Partial; first production slice is accepted on Windows and Linux |
 | G6 | Federation | Partial |
 | G7 | Settlement | Partial; the bounded no-value simulator slice is accepted, while live-value settlement remains prohibited |
-| G8 | Society laboratory | Partial; shared culture and the bounded deterministic diffusion lab are accepted on Windows and Linux |
+| G8 | Society laboratory | Partial; shared culture, automatic descriptive specialization discovery, and the bounded deterministic diffusion lab are accepted on Windows and Linux |
 
-The next release-critical gaps are source publication and repeatable CI provenance, signed packages, safe native updating and rollback, and independent-machine evidence. Native macOS remains deferred until after the Windows/Linux 1.0 path. Gate 8 additionally needs autonomous cultural cycles, behavioral profession inference, consequential institutions, wider metrics/uncertainty, and society-scale observation.
+The next release-critical gaps are source publication and repeatable CI provenance, signed packages, safe native updating and rollback, and independent-machine evidence. Native macOS remains deferred until after the Windows/Linux 1.0 path. Gate 8 additionally needs autonomous cultural cycles, profession certification or automatic work assignment, consequential institutions, wider metrics/uncertainty, and society-scale observation.
