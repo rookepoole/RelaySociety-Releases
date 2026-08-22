@@ -9,6 +9,18 @@ This file records public release-channel and documentation changes. Product chan
 - Added a machine-readable current-release catalog and automated repository validation.
 - Added structured bug and feature-request templates.
 
+## v0.3.79 beta — 2026-08-22
+
+- Published the accepted unsigned schema-46 Windows x64 and static Linux x64 packages without rebuilding them.
+- Added immutable versioned provider profiles that bind driver revision, endpoints, model, authentication, credential generation, ceilings, policies, capabilities, and a canonical profile hash into every durable call.
+- Added native Ollama Chat, OpenAI Responses, Anthropic Messages, Gemini Interactions v1beta, and retained OpenAI-compatible Chat Completions drivers for non-streaming text.
+- Added bounded authenticated model discovery to the CLI, API, 104-operation Python/TypeScript clients, and Control Room.
+- Qualified exact-wire authentication, pagination, redirects, response limits, malformed/empty results, credential-reflection rejection, real native Ollama execution, Windows/Linux package launch and OS custody, and schema-45-to-46 migration.
+- Kept the support statement precise: live cloud accounts, a successful second-model capability probe, enterprise/external drivers, streaming, tools, embeddings, and non-text modalities remain open.
+- Published exact SHA-256 checksums and the immutable manual-update manifest.
+
+[Release notes and downloads](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.79)
+
 ## v0.3.78 beta — 2026-08-22
 
 - Published the accepted unsigned schema-45 Windows x64 and static Linux x64 packages without rebuilding them.
