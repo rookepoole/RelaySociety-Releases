@@ -1,30 +1,30 @@
 # Relay Society beta: exact getting-started guide
 
-This guide applies to the accepted unsigned Relay Society v0.3.76/schema-44 Windows x64 and Linux x64 packages. macOS has no accepted native artifact.
+This guide applies to the accepted unsigned Relay Society v0.3.77/schema-44 Windows x64 and Linux x64 packages. macOS has no accepted native artifact.
 
 ## Download first
 
-Use only the assets attached to the [v0.3.76 GitHub release](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.76).
+Use only the assets attached to the [v0.3.77 GitHub release](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.77).
 
 | Platform | File | Required SHA-256 |
 | --- | --- | --- |
-| Windows x64 | `Relay-Society-v0.3.76-windows-x64.zip` | `42e00042e8e2c6ed2869b82a3a1d01311daa325b194be4a6897b4c13c91aa78f` |
-| Linux x64 | `Relay-Society-v0.3.76-linux-x64.tar.gz` | `c1c70921fbddde2ae5b08b0619da13c6ef816dc5a143cc967bd8d5be4e50e853` |
+| Windows x64 | `Relay-Society-v0.3.77-windows-x64.zip` | `b7d340a50a2e40a7e9139cafff29443d96283ed3311a7375b7b5a57b88447a00` |
+| Linux x64 | `Relay-Society-v0.3.77-linux-x64.tar.gz` | `3167a1b68796866d4f3c57cc9a6bb238da160216da6b1181a5a8ab73e57e3cb4` |
 
 Do not run a package when the complete digest differs. See [Release integrity](RELEASE_INTEGRITY.md) for verification details and limitations.
 
 ## Windows x64
 
-1. Download `Relay-Society-v0.3.76-windows-x64.zip`.
+1. Download `Relay-Society-v0.3.77-windows-x64.zip`.
 2. Open PowerShell in the download directory and run:
 
    ```powershell
-   Get-FileHash .\Relay-Society-v0.3.76-windows-x64.zip -Algorithm SHA256
+   Get-FileHash .\Relay-Society-v0.3.77-windows-x64.zip -Algorithm SHA256
    ```
 
-3. Require the complete result to equal `42e00042e8e2c6ed2869b82a3a1d01311daa325b194be4a6897b4c13c91aa78f`.
+3. Require the complete result to equal `b7d340a50a2e40a7e9139cafff29443d96283ed3311a7375b7b5a57b88447a00`.
 4. In File Explorer, right-click the ZIP and choose **Extract All**.
-5. Open the extracted `Relay-Society-v0.3.76-windows-x64` directory. Do not launch from inside the ZIP.
+5. Open the extracted `Relay-Society-v0.3.77-windows-x64` directory. Do not launch from inside the ZIP.
 6. Double-click **Launch Relay Society.cmd** and keep the console window open.
 7. The launcher opens the Control Room at `http://127.0.0.1:7411` and uses a one-use local sign-in code.
 8. Because this beta is unsigned, Windows can show a protection dialog. Verify the complete checksum first. If it matches, choose **More info → Run anyway**.
@@ -37,14 +37,14 @@ Runtime data remains outside the application directory at `%LOCALAPPDATA%\Relay 
 The normal desktop path requires a running, unlocked freedesktop Secret Service in the same user session, normally GNOME Keyring. Headless users must initialize the included Vault Transit path before first launch instead of weakening local key custody.
 
 ```sh
-sha256sum Relay-Society-v0.3.76-linux-x64.tar.gz
-tar -xzf Relay-Society-v0.3.76-linux-x64.tar.gz
-cd Relay-Society-v0.3.76-linux-x64
+sha256sum Relay-Society-v0.3.77-linux-x64.tar.gz
+tar -xzf Relay-Society-v0.3.77-linux-x64.tar.gz
+cd Relay-Society-v0.3.77-linux-x64
 ./Install\ for\ Current\ User.sh
 relay-society-control-room
 ```
 
-Require the complete archive checksum to equal `c1c70921fbddde2ae5b08b0619da13c6ef816dc5a143cc967bd8d5be4e50e853`.
+Require the complete archive checksum to equal `3167a1b68796866d4f3c57cc9a6bb238da160216da6b1181a5a8ab73e57e3cb4`.
 
 The installer creates a versioned current-user installation, command links, desktop entry, and user-service definition. It does not start the service. Portable users can run `./Launch\ Relay\ Society.sh` from the extracted directory.
 
@@ -101,9 +101,10 @@ Council bearers prove distinct council-scoped authorization subjects, not one-hu
 4. Open **Culture** in the Control Room. The assignee or culture member may create any runtime-defined kind, name, description, structured vocabulary, and retained evidence. Relay enumerates lineage mechanics, not permitted cultural outcomes.
 5. Create an origin or a mutation/recombination referencing exact same-task parents. Record attributable adoption, rejection, teaching, practice, retirement, or revival events.
 6. Refresh the Culture Observatory to inspect parentage, hashes, actors, behavior history, and structural counts.
-7. As the requester, run a bounded Society Lab experiment with explicit agent subjects, undirected topology, agent-authored candidates, seed, thresholds, and 1–2,000 rounds. Retain the returned simulation receipt.
+7. After the same agent has adopted or practiced an item and completed at least two distinct signed successful tasks for one capability, inspect the automatically derived candidate. Choose **Discover from evidence** to retain every currently eligible missing candidate; an exact retry creates nothing.
+8. As the requester, run a bounded Society Lab experiment with explicit agent subjects, undirected topology, agent-authored candidates, seed, thresholds, and 1–2,000 rounds. Retain the returned simulation receipt.
 
-Culture is descriptive evidence, not authority. A cultural item's name or popularity never changes policy, identity, task, council, reputation, federation, settlement, credential, or execution powers. Society Lab output is synthetic, creates no live cultural item/event, impersonates no agent, and always declares `persistedArtifacts:false` and `authorityEffect:none`.
+Culture and automatically discovered specializations are descriptive evidence, not authority or profession certification. A cultural item's name, popularity, or specialization candidate never changes policy, identity, task, council, reputation, federation, settlement, credential, work assignment, or execution powers. Society Lab output is synthetic, creates no live cultural item/event, impersonates no agent, and always declares `persistedArtifacts:false` and `authorityEffect:none`.
 
 ## Back up before changing anything
 
@@ -115,7 +116,7 @@ A normal backup does not contain the Windows Credential Manager or Linux Secret 
 
 ## Update safely
 
-Relay v0.3.76 uses manual, user-confirmed updates. It does not automatically download or execute a replacement.
+Relay v0.3.77 uses manual, user-confirmed updates. It does not automatically download or execute a replacement.
 
 1. Complete and verify the backup steps above.
 2. Stop Relay.
@@ -142,4 +143,4 @@ To downgrade after a schema upgrade, restore the matching pre-upgrade backup rat
 - The default product is single-administrator and local-first, not multi-tenant identity infrastructure.
 - Same-user malware and hostile worker code are outside the security boundary.
 - External effects are not globally exactly once; ambiguous outcomes quarantine rather than silently repeat.
-- Native macOS, signed provenance, reproducible distributions, automatic updating, full public reputation, broader council governance modes, live-value settlement, full AP2/SD-JWT/delegation, a real payment provider, autonomous/model-backed cultural cycles, behavior-backed profession inference, consequential institutions, and society-scale simulation remain open work.
+- Native macOS, signed provenance, reproducible distributions, automatic updating, full public reputation, broader council governance modes, live-value settlement, full AP2/SD-JWT/delegation, a real payment provider, autonomous/model-backed cultural cycles, profession certification or automatic work assignment, consequential institutions, and society-scale simulation remain open work.

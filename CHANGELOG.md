@@ -9,6 +9,18 @@ This file records public release-channel and documentation changes. Product chan
 - Added a machine-readable current-release catalog and automated repository validation.
 - Added structured bug and feature-request templates.
 
+## v0.3.77 beta — 2026-08-22
+
+- Published the accepted unsigned schema-44 Windows x64 and static Linux x64 packages without rebuilding them.
+- Added automatic, label-blind specialization discovery from an agent's own cultural adoption/practice plus distinct signed successful tasks for one capability.
+- Removed caller-selected evidence from the normal discovery path; the no-body action retains every missing eligible candidate in canonical order and exact retries create nothing.
+- Kept automatic candidates and retained records descriptive with `authorityEffect:none` and `reputationEffect:none`; they do not certify professions, assign work, or widen task authority.
+- Expanded both generated clients to 102 operations and qualified clean-installed Windows Python/TypeScript plus Linux Python discovery flows.
+- Qualified the v0.3.76-to-v0.3.77 same-schema upgrade, OS custody, canonical prior evidence, authenticated backup/restore, and packaged Culture Observatory visual QA.
+- Published exact SHA-256 checksums and the immutable manual-update manifest.
+
+[Release notes and downloads](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.77)
+
 ## v0.3.76 beta — 2026-08-22
 
 - Published the accepted unsigned schema-44 Windows x64 and static Linux x64 packages.

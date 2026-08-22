@@ -4,20 +4,20 @@
 
 Relay Society is a local-first runtime and Control Room for creating exact task contracts, granting bounded authority, running durable work, retaining evidence, and closing successful tasks with signed receipts.
 
-[Download the latest beta](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.76) · [Exact setup guide](docs/GETTING_STARTED.md) · [Capabilities](docs/CAPABILITIES.md) · [Security](SECURITY.md) · [Report a problem](https://github.com/rookepoole/RelaySociety-Releases/issues/new/choose)
+[Download the latest beta](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.77) · [Exact setup guide](docs/GETTING_STARTED.md) · [Capabilities](docs/CAPABILITIES.md) · [Security](SECURITY.md) · [Report a problem](https://github.com/rookepoole/RelaySociety-Releases/issues/new/choose)
 
 > [!WARNING]
-> Relay Society v0.3.76 is an **unsigned beta**. Windows and Linux x64 packages are available; there is no accepted macOS build yet. Verify the complete SHA-256 digest before running a package. Checksums detect changed bytes, but they are not a substitute for code signing or independently attested provenance.
+> Relay Society v0.3.77 is an **unsigned beta**. Windows and Linux x64 packages are available; there is no accepted macOS build yet. Verify the complete SHA-256 digest before running a package. Checksums detect changed bytes, but they are not a substitute for code signing or independently attested provenance.
 
-## Download v0.3.76 beta
+## Download v0.3.77 beta
 
 | Platform | Package | Size | SHA-256 |
 | --- | --- | ---: | --- |
-| Windows 10/11 x64 | [Portable ZIP](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.76/Relay-Society-v0.3.76-windows-x64.zip) | 10,589,025 bytes | `42e00042e8e2c6ed2869b82a3a1d01311daa325b194be4a6897b4c13c91aa78f` |
-| Linux x64, static musl | [tar.gz](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.76/Relay-Society-v0.3.76-linux-x64.tar.gz) | 11,289,544 bytes | `c1c70921fbddde2ae5b08b0619da13c6ef816dc5a143cc967bd8d5be4e50e853` |
+| Windows 10/11 x64 | [Portable ZIP](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.77/Relay-Society-v0.3.77-windows-x64.zip) | 10,960,845 bytes | `b7d340a50a2e40a7e9139cafff29443d96283ed3311a7375b7b5a57b88447a00` |
+| Linux x64, static musl | [tar.gz](https://github.com/rookepoole/RelaySociety-Releases/releases/download/v0.3.77/Relay-Society-v0.3.77-linux-x64.tar.gz) | 11,329,398 bytes | `3167a1b68796866d4f3c57cc9a6bb238da160216da6b1181a5a8ab73e57e3cb4` |
 | macOS | Not available | — | Native qualification, signing, and notarization remain open |
 
-The [v0.3.76 release page](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.76) also contains `SHA256SUMS.txt`, release notes, and the immutable machine-readable update manifest. [`releases/current.json`](releases/current.json) is the repository's human- and machine-readable release catalog; it does not authorize automatic execution.
+The [v0.3.77 release page](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.77) also contains `SHA256SUMS.txt`, release notes, and the immutable machine-readable update manifest. [`releases/current.json`](releases/current.json) is the repository's human- and machine-readable release catalog; it does not authorize automatic execution.
 
 ## Start in a few minutes
 
@@ -27,7 +27,7 @@ The [v0.3.76 release page](https://github.com/rookepoole/RelaySociety-Releases/r
 2. Verify it in PowerShell:
 
    ```powershell
-   Get-FileHash .\Relay-Society-v0.3.76-windows-x64.zip -Algorithm SHA256
+   Get-FileHash .\Relay-Society-v0.3.77-windows-x64.zip -Algorithm SHA256
    ```
 
 3. Require the complete digest to match the Windows value above.
@@ -42,9 +42,9 @@ Windows can show a protection warning because the beta is unsigned. Only continu
 The normal desktop path requires an unlocked freedesktop Secret Service in the same user session, normally GNOME Keyring.
 
 ```sh
-sha256sum Relay-Society-v0.3.76-linux-x64.tar.gz
-tar -xzf Relay-Society-v0.3.76-linux-x64.tar.gz
-cd Relay-Society-v0.3.76-linux-x64
+sha256sum Relay-Society-v0.3.77-linux-x64.tar.gz
+tar -xzf Relay-Society-v0.3.77-linux-x64.tar.gz
+cd Relay-Society-v0.3.77-linux-x64
 ./Install\ for\ Current\ User.sh
 relay-society-control-room
 ```
@@ -64,11 +64,11 @@ See [Getting started](docs/GETTING_STARTED.md) for the complete first-task, back
 - Runs the governed-council slice with distinct council principals, typed content-addressed citations, conflict exclusion, vote revision, deterministic close, structured minority reports, named-authority appeal/review/escalation/veto records, derived effective disposition, and integrity verification.
 - Runs the bounded no-value settlement slice with signed contribution quotes, exact simulator funding and holds, signed usage evidence, isolated disputes, unrelated payouts, and immutable double-entry receipts. Post-finalization resolution is ledger-only: a terminal `disputed` task and its original signed receipts are never rewritten into success.
 - Lets independently authenticated culture-only members and the assignee create arbitrary traditions, slang, technologies, myths, schools, professions, institutions, and other runtime-defined cultural artifacts through general lineage and behavior mechanics without granting task authority.
-- Lets agents describe an emerging specialization only after two or more distinct signed successful tasks support the same capability; the record is label-blind evidence with no automatic authority, reputation change, profession certification, or work assignment.
+- Automatically discovers eligible, label-blind specialization candidates from an agent's own adoption/practice history and two or more distinct signed successful tasks, then lets the administrator retain every missing candidate in one retry-safe action without selecting the evidence. Candidates grant no authority, reputation, profession certification, or work assignment.
 - Runs a deterministic seeded Society Lab whose label-blind traces are exactly replayable and explicitly synthetic; lab outputs never impersonate agents, become live culture, or gain Relay authority.
 - Stores the master key in Windows Credential Manager or Linux Secret Service and keeps provider credentials sealed.
 - Provides transactional backup, verification, restore, portable recovery, and read-only diagnostics.
-- Ships a 101-operation versioned REST API, OpenAPI 3.1.1 contract, and deterministic Python and TypeScript clients.
+- Ships a 102-operation versioned REST API, OpenAPI 3.1.1 contract, and deterministic Python and TypeScript clients.
 - Includes bounded integration slices for MCP, A2A, signed webhooks, OpenAI-compatible providers, Ollama, and five agent frameworks.
 
 The packages contain the real schema-44 runtime and Control Room. They are not mock or demonstration-only bundles. The full evidence-bounded capability inventory is in [CAPABILITIES.md](docs/CAPABILITIES.md).
