@@ -9,6 +9,19 @@ This file records public release-channel and documentation changes. Product chan
 - Added a machine-readable current-release catalog and automated repository validation.
 - Added structured bug and feature-request templates.
 
+## v0.3.78 beta — 2026-08-22
+
+- Published the accepted unsigned schema-45 Windows x64 and static Linux x64 packages without rebuilding them.
+- Added bounded, manually invoked model-backed cultural cycles for the exact active assignee through a contract-listed provider tool.
+- Kept cultural outcomes open-vocabulary: Relay validates general no-op/create/mutate/recombine/event mechanics, derives identifiers, and rejects malformed or authority-like output without creating culture.
+- Retained exact provider/model/context/request/response/proposal/artifact provenance, credential isolation, exact replay, restart recovery, and authenticated backup/restore.
+- Added installed-Ollama model discovery and exact model selection to the Windows and Linux helpers; `qwen3:8b` is qualification evidence, not a dependency.
+- Expanded both generated clients to 103 operations and qualified Windows Python/TypeScript, Linux Python, schema-44-to-45 migration, real local-Ollama execution on Windows, and packaged Culture Observatory visual QA.
+- Kept universal-model wording out of the release: v0.3.78 still uses non-streaming OpenAI-compatible Chat Completions while native provider drivers remain open.
+- Published exact SHA-256 checksums and the immutable manual-update manifest.
+
+[Release notes and downloads](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.78)
+
 ## v0.3.77 beta — 2026-08-22
 
 - Published the accepted unsigned schema-44 Windows x64 and static Linux x64 packages without rebuilding them.
