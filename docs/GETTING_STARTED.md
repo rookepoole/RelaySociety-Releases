@@ -1,30 +1,30 @@
 # Relay Society beta: exact getting-started guide
 
-This guide applies to the accepted unsigned Relay Society v0.3.79/schema-46 Windows x64 and Linux x64 packages. macOS has no accepted native artifact.
+This guide applies to the accepted unsigned Relay Society v0.3.80/schema-47 Windows x64 and Linux x64 packages. macOS has no accepted native artifact.
 
 ## Download first
 
-Use only the assets attached to the [v0.3.79 GitHub release](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.79).
+Use only the assets attached to the [v0.3.80 GitHub release](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.80).
 
 | Platform | File | Required SHA-256 |
 | --- | --- | --- |
-| Windows x64 | `Relay-Society-v0.3.79-windows-x64.zip` | `96f4842efc088e5b8bc5857c229cf19914c1d131c4cfbefdd441c8332b8b2e99` |
-| Linux x64 | `Relay-Society-v0.3.79-linux-x64.tar.gz` | `d92a1e2371b0a98a3a4dfc0db6e2fd67f09c2b54dc34c446b3d1f31d460a4972` |
+| Windows x64 | `Relay-Society-v0.3.80-windows-x64.zip` | `226402e8e0d78a77cb5918be01021f3980e3aeaf8d5c347b82bd440c43131c68` |
+| Linux x64 | `Relay-Society-v0.3.80-linux-x64.tar.gz` | `3a76540a95a59804f763cf4857da536afe89c0163564e5aaf4e6cea7c5b13fa7` |
 
 Do not run a package when the complete digest differs. See [Release integrity](RELEASE_INTEGRITY.md) for verification details and limitations.
 
 ## Windows x64
 
-1. Download `Relay-Society-v0.3.79-windows-x64.zip`.
+1. Download `Relay-Society-v0.3.80-windows-x64.zip`.
 2. Open PowerShell in the download directory and run:
 
    ```powershell
-   Get-FileHash .\Relay-Society-v0.3.79-windows-x64.zip -Algorithm SHA256
+   Get-FileHash .\Relay-Society-v0.3.80-windows-x64.zip -Algorithm SHA256
    ```
 
-3. Require the complete result to equal `96f4842efc088e5b8bc5857c229cf19914c1d131c4cfbefdd441c8332b8b2e99`.
+3. Require the complete result to equal `226402e8e0d78a77cb5918be01021f3980e3aeaf8d5c347b82bd440c43131c68`.
 4. In File Explorer, right-click the ZIP and choose **Extract All**.
-5. Open the extracted `Relay-Society-v0.3.79-windows-x64` directory. Do not launch from inside the ZIP.
+5. Open the extracted `Relay-Society-v0.3.80-windows-x64` directory. Do not launch from inside the ZIP.
 6. Double-click **Launch Relay Society.cmd** and keep the console window open.
 7. The launcher opens the Control Room at `http://127.0.0.1:7411` and uses a one-use local sign-in code.
 8. Because this beta is unsigned, Windows can show a protection dialog. Verify the complete checksum first. If it matches, choose **More info → Run anyway**.
@@ -37,14 +37,14 @@ Runtime data remains outside the application directory at `%LOCALAPPDATA%\Relay 
 The normal desktop path requires a running, unlocked freedesktop Secret Service in the same user session, normally GNOME Keyring. Headless users must initialize the included Vault Transit path before first launch instead of weakening local key custody.
 
 ```sh
-sha256sum Relay-Society-v0.3.79-linux-x64.tar.gz
-tar -xzf Relay-Society-v0.3.79-linux-x64.tar.gz
-cd Relay-Society-v0.3.79-linux-x64
+sha256sum Relay-Society-v0.3.80-linux-x64.tar.gz
+tar -xzf Relay-Society-v0.3.80-linux-x64.tar.gz
+cd Relay-Society-v0.3.80-linux-x64
 ./Install\ for\ Current\ User.sh
 relay-society-control-room
 ```
 
-Require the complete archive checksum to equal `b0ce04dff71badf817cb384f6888da0a732111802f31d55f822a9c1a6d43bc40`.
+Require the complete archive checksum to equal `3a76540a95a59804f763cf4857da536afe89c0163564e5aaf4e6cea7c5b13fa7`.
 
 The installer creates a versioned current-user installation, command links, desktop entry, and user-service definition. It does not start the service. Portable users can run `./Launch\ Relay\ Society.sh` from the extracted directory.
 
@@ -112,7 +112,18 @@ The easiest local path is Ollama. Install and start Ollama separately, download 
 
 For a remote service, run **Configure Authenticated Provider** and choose the exact built-in driver: OpenAI Responses, Anthropic Messages, Gemini Interactions v1beta, or OpenAI-compatible Chat Completions. Enter the exact HTTPS endpoint, model name, and credential, then use bounded model discovery or an exact manual model ID. Provider credentials stay sealed in Relay's OS-backed vault and are never given to the assignee or retained in cultural evidence. Add `provider:<provider-id>:chat` to the task's allowed tools before invitation and activation. The exact assignee can then invoke the generated client's `runCulturalCycle` operation for one to eight bounded rounds. Invalid or structurally incomplete model output is rejected without creating culture; exact retries replay the retained result.
 
-v0.3.79 implements five immutable non-streaming text driver revisions: native Ollama Chat, OpenAI Responses, Anthropic Messages, Gemini Interactions v1beta, and OpenAI-compatible Chat Completions. Windows package qualification includes real native Ollama execution; the three cloud drivers have exact deterministic wire tests but no live-account claim without owner-supplied credentials. Streaming, tools, embeddings, non-text modalities, enterprise transports, and external drivers remain separate work, so this release does not promise every model.
+v0.3.80 implements five immutable non-streaming text driver revisions: native Ollama Chat, OpenAI Responses, Anthropic Messages, Gemini Interactions v1beta, and OpenAI-compatible Chat Completions. Windows package qualification includes real native Ollama execution; the three cloud drivers have exact deterministic wire tests but no live-account claim without owner-supplied credentials. Streaming, tools, embeddings, non-text modalities, enterprise transports, and external drivers remain separate work, so this release does not promise every model.
+
+## Schedule unattended cultural cycles
+
+1. Complete the provider and active-task setup above. Only the task's exact active assignee can create its schedule.
+2. In the assignee Control Room, open **Unattended cultural cycles** and select the exact task, immutable provider, cycle template, start time, fixed delay, and finite run cap. Keep the participant session active through the schedule's authority window.
+3. Review the derived schedule before creating it. Relay stores the participant credential lease and bearer hash, never the recoverable bearer or provider key.
+4. Use **Pause** before maintenance and **Resume** only after checking task, credential, provider, and tool authority. **Revoke** is terminal.
+5. Inspect each occurrence and Culture Observatory result. Relay dispatches at most one overdue occurrence after downtime, derives the next due time from completion plus the fixed delay, and does not create a catch-up burst.
+6. Treat `rejected`, `failed`, or `ambiguous` occurrences as retained evidence. Relay pauses safely instead of silently retrying uncertain cultural creation.
+
+The Windows release gate created a real `qwen3:8b` schedule, stopped Relay before the due time, restarted after it, and observed one fenced completion plus exact backup/restore. That model is qualification evidence, not a required model or a promise that every model returns valid cultural JSON.
 
 ## Back up before changing anything
 
@@ -124,7 +135,7 @@ A normal backup does not contain the Windows Credential Manager or Linux Secret 
 
 ## Update safely
 
-Relay v0.3.79 uses manual, user-confirmed updates. It does not automatically download or execute a replacement.
+Relay v0.3.80 uses manual, user-confirmed updates. It does not automatically download or execute a replacement.
 
 1. Complete and verify the backup steps above.
 2. Stop Relay.
@@ -151,4 +162,4 @@ To downgrade after a schema upgrade, restore the matching pre-upgrade backup rat
 - The default product is single-administrator and local-first, not multi-tenant identity infrastructure.
 - Same-user malware and hostile worker code are outside the security boundary.
 - External effects are not globally exactly once; ambiguous outcomes quarantine rather than silently repeat.
-- Native macOS, signed provenance, reproducible distributions, automatic updating, full public reputation, broader council governance modes, live-value settlement, full AP2/SD-JWT/delegation, a real payment provider, live-cloud provider qualification, external/enterprise model drivers, streaming/tools/non-text model capabilities, unattended cultural scheduling, profession certification or automatic work assignment, consequential institutions, and society-scale simulation remain open work.
+- Native macOS, signed provenance, reproducible distributions, automatic updating, full public reputation, broader council governance modes, live-value settlement, full AP2/SD-JWT/delegation, a real payment provider, live-cloud provider qualification, external/enterprise model drivers, streaming/tools/non-text model capabilities, coordinated multi-agent cultural generation, profession certification or automatic work assignment, consequential institutions, and society-scale simulation remain open work.

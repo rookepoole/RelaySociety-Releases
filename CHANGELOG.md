@@ -9,6 +9,19 @@ This file records public release-channel and documentation changes. Product chan
 - Added a machine-readable current-release catalog and automated repository validation.
 - Added structured bug and feature-request templates.
 
+## v0.3.80 beta — 2026-08-22
+
+- Published the accepted unsigned schema-47 Windows x64 and static Linux x64 packages without rebuilding them.
+- Added finite unattended cultural-cycle schedules created only by the active task's exact assignee and bound to an immutable participant lease/hash, provider profile, template, authority window, fixed delay, and run cap without storing a recoverable participant bearer.
+- Added deterministic occurrence identities, one fenced claim, restart reuse of the exact cycle run, fixed-delay/no-catch-up timing, per-dispatch authority revalidation, safe pause on failed or ambiguous work, idempotent pause/resume, and terminal revoke.
+- Added participant API, protected-bearer-file CLI, 107-operation generated-client, and Control Room schedule controls.
+- Qualified a real Windows native-Ollama schedule across stop-before-due/restart-after-due, one completed occurrence, no catch-up, authenticated backup/restore, and exact Observatory preservation.
+- Qualified schema-46-to-47 migration, package launch, OS custody, clean-installed clients, and recovery on Windows and static Linux.
+- Kept the support boundary precise: `qwen3:8b` is qualification evidence, not a dependency; live cloud accounts, every-model wording, streaming/tools/non-text, external/enterprise drivers, signing, and automatic updater execution remain open.
+- Published exact SHA-256 checksums and the immutable manual-update manifest.
+
+[Release notes and downloads](https://github.com/rookepoole/RelaySociety-Releases/releases/tag/v0.3.80)
+
 ## v0.3.79 beta — 2026-08-22
 
 - Published the accepted unsigned schema-46 Windows x64 and static Linux x64 packages without rebuilding them.
